@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Choice Test</title>
+    <title>Exercitium 26.1.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
     <style>
+        body {
+            margin: 20px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            font-family: 'Fira Mono', monospace;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            font-family: 'Fira Mono', monospace;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
         .correct { color: green; }
         .incorrect { color: red; }
     </style>
-</head>
 <body>
-    <h1>Multiple Choice Test</h1>
+    <h1>Exercitium 26.1.1</h1>
     <form id="quiz">
         <!-- Вопрос 1 -->
         <p>1. Quis fuit Pygmaliōn?</p>
@@ -68,73 +94,64 @@
         <label for="q5d">fēmina quaedam ad signa spectanda in Pygmaliōnis tabernam accesserat, quam ille uxōrem dūxit</label><br>
 
     </form>
+    <p id="result"></p>
 
     <br>
     <button id="checkAnswers">Check Answers</button>
     <button id="showAnswers">Show Answers</button>
     <button id="deleteAnswers">Delete Answers</button>
 
-    <p id="result"></p>
+    
 
-    <script>
-        const correctAnswers = {
+  <script>
+    const correctAnswers = {
             q1: ["artīs studiōsus", "vir dīves"],
             q2: ["ex marmore facta", "quae aliī admīrābantur", "signa nātūram superantēs"],
             q3: ["oculīs caeruleīs"],
             q4: ["cupidus erat puellam ex marmore factam vīvam aspiciendī; ita deōs ōrābat"],
             q5: ["id factum est, quod Pygmaliōn deōs ōrāverat", "signō puellae vīta data est"]
         };
+document.getElementById("checkAnswers").addEventListener("click", function() {
+    let resultText = "";
+    let correctCount = 0;
+    let totalQuestions = 5;
 
-        document.getElementById("checkAnswers").addEventListener("click", function() {
-            let resultText = "";
-            let correctCount = 0;
-            let totalQuestions = 5;
+    for (let i = 1; i <= totalQuestions; i++) {
+        const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+        const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
+        const correct = correctAnswers[`q${i}`];
 
-            for (let i = 1; i <= totalQuestions; i++) {
-                const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
-                const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
-                const correct = correctAnswers[`q${i}`];
-                
-                if (selectedValues.length === correct.length && selectedValues.every(val => correct.includes(val))) {
-                    selected.forEach(checkbox => checkbox.nextElementSibling.classList.add("correct"));
-                    resultText += `Question ${i}: Correct!<br>`;
-                    correctCount++;
-                } else {
-                    selected.forEach(checkbox => checkbox.nextElementSibling.classList.add("incorrect"));
-                    resultText += `Question ${i}: Incorrect!<br>`;
-                }
-            }
-
-            resultText += `<br>You got ${correctCount} out of ${totalQuestions} correct.`;
-            document.getElementById("result").innerHTML = resultText;
-        });
-
-        document.getElementById("showAnswers").addEventListener("click", function() {
-                        for (let i = 1; i <= 5; i++) {
-                const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
-                const correct = correctAnswers[`q${i}`];
-                
-                checkboxes.forEach(checkbox => {
-                    if (correct.includes(checkbox.value)) {
-                        checkbox.nextElementSibling.classList.add("correct");
-                        checkbox.nextElementSibling.style.fontWeight = 'bold';
-                    } else {
-                        checkbox.nextElementSibling.classList.add("incorrect");
-                        checkbox.nextElementSibling.style.fontWeight = 'bold';
-                    }
-                });
-            }
-        });
-
-        document.getElementById("deleteAnswers").addEventListener("click", function() {
-            const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
-            allCheckboxes.forEach(checkbox => {
-                checkbox.checked = false;
-                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
-                checkbox.nextElementSibling.style.fontWeight = 'normal';
+        // Проверка, выбраны ли все правильные ответы
+        if (selectedValues.length === correct.length && selectedValues.every(val => correct.includes(val))) {
+            selected.forEach(checkbox => {
+                checkbox.nextElementSibling.classList.add("correct");
+                checkbox.nextElementSibling.style.fontWeight = 'bold'; // Установить жирный шрифт
             });
-            document.getElementById("result").innerHTML = '';
-        });
+            resultText += `Question ${i}: Correct!<br>`;
+            correctCount++;
+        } else if (selectedValues.some(val => correct.includes(val))) {
+            // Если выбраны некоторые правильные ответы, но не все
+            selected.forEach(checkbox => {
+                if (correct.includes(checkbox.value)) {
+                    checkbox.nextElementSibling.classList.add("correct"); // Подсветить зеленым
+                    checkbox.nextElementSibling.style.fontWeight = 'normal'; // Установить нормальный шрифт
+                } else {
+                    checkbox.nextElementSibling.classList.add("incorrect");
+                    checkbox.nextElementSibling.style.fontWeight = 'bold'; // Для неправильных ответов
+                }
+            });
+            resultText += `Question ${i}: You selected some correct answers, but there are more correct answers to choose from.<br>`;
+        } else {
+            selected.forEach(checkbox => checkbox.nextElementSibling.classList.add("incorrect"));
+            resultText += `Question ${i}: Incorrect!<br>`;
+        }
+    }
+
+    resultText += `<br>You got ${correctCount} out of ${totalQuestions} correct.`;
+    document.getElementById("result").innerHTML = resultText;
+});
     </script>
+</body>
+</html>
 </body>
 </html>
