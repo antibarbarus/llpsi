@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitium 26.1.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            font-family: 'Fira Mono', monospace;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            font-family: 'Fira Mono', monospace;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+<body>
+    <h1>Exercitium 26.1.1</h1>
+    <form id="quiz">
+        <!-- Вопрос 1 -->
+        <p>1. Quis fuit Pygmaliōn?</p>
+        <input type="checkbox" id="q1a" name="q1" value="vir Graecus superbus">
+        <label for="q1a">vir Graecus superbus</label><br>
+        <input type="checkbox" id="q1b" name="q1" value="fēminārum cupidus">
+        <label for="q1b">fēminārum cupidus</label><br>
+        <input type="checkbox" id="q1c" name="q1" value="artīs studiōsus">
+        <label for="q1c">artīs studiōsus</label><br>
+        <input type="checkbox" id="q1d" name="q1" value="vir dīves">
+        <label for="q1d">vir dīves</label><br>
+
+        <!-- Вопрос 2 -->
+        <p>2. Quae signa Pygmaliōn cōnficiēbat?</p>
+        <input type="checkbox" id="q2a" name="q2" value="ex marmore facta">
+        <label for="q2a">ex marmore facta</label><br>
+        <input type="checkbox" id="q2b" name="q2" value="mōnstra contrā nātūram cōnfecta">
+        <label for="q2b">mōnstra contrā nātūram cōnfecta</label><br>
+        <input type="checkbox" id="q2c" name="q2" value="quae aliī admīrābantur">
+        <label for="q2c">quae aliī admīrābantur</label><br>
+        <input type="checkbox" id="q2d" name="q2" value="signa nātūram superantēs">
+        <label for="q2d">signa nātūram superantēs</label><br>
+
+        <!-- Вопрос 3 -->
+        <p>3. Quā faciē fuit signum puellae fōrmōsissimae?</p>
+        <input type="checkbox" id="q3a" name="q3" value="labrīs aureīs">
+        <label for="q3a">labrīs aureīs</label><br>
+        <input type="checkbox" id="q3b" name="q3" value="nigrīs auribus">
+        <label for="q3b">nigrīs auribus</label><br>
+        <input type="checkbox" id="q3c" name="q3" value="oculīs caeruleīs">
+        <label for="q3c">oculīs caeruleīs</label><br>
+        <input type="checkbox" id="q3d" name="q3" value="nāsō rubrō">
+        <label for="q3d">nāsō rubrō</label><br>
+
+        <!-- Вопрос 4 -->
+        <p>4. Quā dē causā Pygmaliōn templa deōrum adīre solēbat?</p>
+        <input type="checkbox" id="q4a" name="q4" value="cupidus erat puellam ex marmore factam vīvam aspiciendī; ita deōs ōrābat">
+        <label for="q4a">cupidus erat puellam ex marmore factam vīvam aspiciendī; ita deōs ōrābat</label><br>
+        <input type="checkbox" id="q4b" name="q4" value="exempla artis suae novissima deīs ostendere volēbat">
+        <label for="q4b">exempla artis suae novissima deīs ostendere volēbat</label><br>
+        <input type="checkbox" id="q4c" name="q4" value="Pygmaliōn, deae amōre captus, cotīdiē templum ad sacrificandum petere solēbat">
+        <label for="q4c">Pygmaliōn, deae amōre captus, cotīdiē templum ad sacrificandum petere solēbat</label><br>
+        <input type="checkbox" id="q4d" name="q4" value="iam diū nūllum signum cōnficere poterat; flendō spērābat deōs sē iuvāre">
+        <label for="q4d">iam diū nūllum signum cōnficere poterat; flendō spērābat deōs sē iuvāre</label><br>
+
+        <!-- Вопрос 5 -->
+        <p>5. Quid est fābulae exitus?</p>
+        <input type="checkbox" id="q5a" name="q5" value="id factum est, quod Pygmaliōn deōs ōrāverat">
+        <label for="q5a">id factum est, quod Pygmaliōn deōs ōrāverat</label><br>
+        <input type="checkbox" id="q5b" name="q5" value="Pygmaliōn diū flēvit, quod eō absente omnia signa ablāta sunt">
+        <label for="q5b">Pygmaliōn diū flēvit, quod eō absente omnia signa ablāta sunt</label><br>
+        <input type="checkbox" id="q5c" name="q5" value="signō puellae vīta data est">
+        <label for="q5c">signō puellae vīta data est</label><br>
+        <input type="checkbox" id="q5d" name="q5" value="fēmina quaedam ad signa spectanda in Pygmaliōnis tabernam accesserat, quam ille uxōrem dūxit">
+        <label for="q5d">fēmina quaedam ad signa spectanda in Pygmaliōnis tabernam accesserat, quam ille uxōrem dūxit</label><br>
+
+    </form>
+    <p id="result"></p>
+
+    <br>
+    <button id="checkAnswers">Check Answers</button>
+    <button id="showAnswers">Show Answers</button>
+    <button id="deleteAnswers">Delete Answers</button>
+
+    
+
+    <script>
+        const correctAnswers = {
+            q1: ["artīs studiōsus", "vir dīves"],
+            q2: ["ex marmore facta", "quae aliī admīrābantur", "signa nātūram superantēs"],
+            q3: ["oculīs caeruleīs"],
+            q4: ["cupidus erat puellam ex marmore factam vīvam aspiciendī; ita deōs ōrābat"],
+            q5: ["id factum est, quod Pygmaliōn deōs ōrāverat", "signō puellae vīta data est"]
+        };
+
+        document.getElementById("checkAnswers").addEventListener("click", function() {
+    let resultText = "";
+    let correctCount = 0;
+    let totalQuestions = 5;
+
+    for (let i = 1; i <= totalQuestions; i++) {
+        const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+        const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
+        const correct = correctAnswers[`q${i}`];
+
+        // Проверка, выбраны ли все правильные ответы
+        if (selectedValues.length === correct.length && selectedValues.every(val => correct.includes(val))) {
+            selected.forEach(checkbox => checkbox.nextElementSibling.classList.add("correct"));
+            resultText += `Question ${i}: Correct!<br>`;
+            correctCount++;
+        } else if (selectedValues.some(val => correct.includes(val))) {
+            // Если выбраны некоторые правильные ответы, но не все
+            selected.forEach(checkbox => {
+                if (correct.includes(checkbox.value)) {
+                    checkbox.nextElementSibling.classList.add("correct"); // Подсветить зеленым
+                } else {
+                    checkbox.nextElementSibling.classList.add("incorrect");
+                }
+                checkbox.nextElementSibling.style.fontWeight = 'bold';
+            });
+            resultText += `Question ${i}: You selected some correct answers, but there are more correct answers to choose from.<br>`;
+        } else {
+            selected.forEach(checkbox => checkbox.nextElementSibling.classList.add("incorrect"));
+            resultText += `Question ${i}: Incorrect!<br>`;
+        }
+    }
+
+    resultText += `<br>You got ${correctCount} out of ${totalQuestions} correct.`;
+    document.getElementById("result").innerHTML = resultText;
+});
+
+       document.getElementById("showAnswers").addEventListener("click", function() {
+    for (let i = 1; i <= 5; i++) {
+        const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
+        const correct = correctAnswers[`q${i}`];
+
+        checkboxes.forEach(checkbox => {
+            // Удаляем класс "incorrect", если был применен
+            checkbox.nextElementSibling.classList.remove("incorrect");
+
+            if (correct.includes(checkbox.value)) {
+                checkbox.nextElementSibling.classList.add("correct");
+                checkbox.nextElementSibling.style.fontWeight = 'bold';
+            } else {
+                // Если это не правильный ответ, добавляем класс "incorrect"
+                if (!checkbox.checked) {
+                    checkbox.nextElementSibling.classList.add("incorrect");
+                    checkbox.nextElementSibling.style.fontWeight = 'bold';
+                }
+            }
+        });
+    }
+});
+
+        document.getElementById("deleteAnswers").addEventListener("click", function() {
+            const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+            allCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+            document.getElementById("result").innerHTML = '';
+        });
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        const questionNumber = this.name.charAt(1); // Получаем номер вопроса
+        const allCheckboxes = document.querySelectorAll(`input[name="q${questionNumber}"]`);
+
+        // Если была нажата кнопка "Show Answers", сбрасываем цвет
+        if (document.getElementById("showAnswers").clicked) {
+            allCheckboxes.forEach(box => {
+                box.nextElementSibling.classList.remove("correct", "incorrect");
+                box.nextElementSibling.style.fontWeight = 'normal';
+            });
+        }
+    });
+});
+
+// Обработчик для кнопки "Show Answers"
+document.getElementById("showAnswers").addEventListener("click", function() {
+    // Указываем, что кнопка была нажата
+    this.clicked = true;
+
+    for (let i = 1; i <= 5; i++) {
+        const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
+        const correct = correctAnswers[`q${i}`];
+
+        checkboxes.forEach(checkbox => {
+            // Удаляем класс "incorrect", если был применен
+            checkbox.nextElementSibling.classList.remove("incorrect");
+
+            if (correct.includes(checkbox.value)) {
+                checkbox.nextElementSibling.classList.add("correct");
+                checkbox.nextElementSibling.style.fontWeight = 'bold';
+            } else {
+                // Если это не правильный ответ, добавляем класс "incorrect"
+                if (!checkbox.checked) {
+                    checkbox.nextElementSibling.classList.add("incorrect");
+                    checkbox.nextElementSibling.style.fontWeight = 'bold';
+                }
+            }
+        });
+    }
+});
+    </script>
+</body>
+</html>
