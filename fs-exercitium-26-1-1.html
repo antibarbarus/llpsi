@@ -97,9 +97,9 @@
     <p id="result"></p>
 
     <br>
-    <button id="checkAnswers">Check Answers</button>
-    <button id="showAnswers">Show Answers</button>
-    <button id="deleteAnswers">Delete Answers</button>
+    <button id="checkAnswers">da Syrae </button>
+    <button id="showAnswers">solve omnia</button>
+    <button id="deleteAnswers">dele omnia</button>
 
     
 
@@ -125,7 +125,7 @@
                 // Проверка, выбраны ли все правильные ответы
                 if (selectedValues.length === correct.length && selectedValues.every(val => correct.includes(val))) {
                     selected.forEach(checkbox => checkbox.nextElementSibling.classList.add("correct"));
-                    resultText += `Quaestio ${i}: Verum!<br>`;
+                    resultText += `Syra responsum tuum ad ${i} interrogatum inspiciens: Recte!<br>`;
                     correctCount++;
                 } else if (selectedValues.some(val => correct.includes(val))) {
                     selected.forEach(checkbox => {
@@ -136,14 +136,14 @@
                         }
                         checkbox.nextElementSibling.style.fontWeight = 'bold';
                     });
-                    resultText += `Quaestio ${i}: Plura sunt eligenda.<br>`;
+                    resultText += `Syra responsum tuum ad ${i} interrogatum inspiciens: Plura sunt eligenda.<br>`;
                 } else {
                     selected.forEach(checkbox => checkbox.nextElementSibling.classList.add("incorrect"));
-                    resultText += `Quaestio ${i}: Falsum!<br>`;
+                    resultText += `Syra responsum tuum ad ${i} interrogatum inspiciens: Prave!<br>`;
                 }
             }
 
-            resultText += `<br>${correctCount} ex ${totalQuestions} vera sunt.`;
+            resultText += `<br>Ergo ${correctCount} ex ${totalQuestions} vera sunt.`;
             document.getElementById("result").innerHTML = resultText;
         });
 
