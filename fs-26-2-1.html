@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitium 26.2.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            font-family: 'Fira Mono', monospace;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            font-family: 'Fira Mono', monospace;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+    <p><a href="exercitia-syrae.html">< infra</a></p>
+    <h1>Exercitium 26.2.1</h1>
+    <h3><i>inter multa recta elige</i></h3>
+    <form id="quiz">
+        <!-- Вопрос 1 -->
+        <p>1. Quae fuit Virgīnia?</p>
+        <input type="checkbox" id="q1a" name="q1" value="Claudiī uxor">
+        <label for="q1a">Claudiī uxor</label><br>
+        <input type="checkbox" id="q1b" name="q1" value="Virgīniī fīlia">
+        <label for="q1b">Virgīniī fīlia</label><br>
+        <input type="checkbox" id="q1c" name="q1" value="pulchra puella">
+        <label for="q1c">pulchra puella</label><br>
+        <input type="checkbox" id="q1d" name="q1" value="vir Rōmānus">
+        <label for="q1d">vir Rōmānus</label><br>
+
+        <!-- Вопрос 2 -->
+        <p>2. Cūr Cornēlius cōnsilium Virginiam rapiendī excōgitāvit?</p>
+        <input type="checkbox" id="q2a" name="q2" value="servō suō Virgīniam dare cōnstituit,  cui ea virgō pulcherrima esse vidēbātur">
+        <label for="q2a">servō suō Virgīniam dare cōnstituit,  cui ea virgō pulcherrima esse vidēbātur</label><br>
+        <input type="checkbox" id="q2b" name="q2" value="ā Virgīniō pecūniam prō Virginīā postulāre volēbat: erat enim pauper">
+        <label for="q2b">ā Virgīniō pecūniam prō Virginīā postulāre volēbat: erat enim pauper</label><br>
+        <input type="checkbox" id="q2c" name="q2" value="Virgīniō invidēbat pulchram puellam habentī">
+        <label for="q2c">Virgīniō invidēbat pulchram puellam habentī</label><br>
+        <input type="checkbox" id="q2d" name="q2" value="Virgīniam valdē amāvit">
+        <label for="q2d">Virgīniam valdē amāvit</label><br>
+
+        <!-- Вопрос 3 -->
+        <p>3. Quōmodo Cornēlius Virgīniam rapuit?</p>
+        <input type="checkbox" id="q3a" name="q3" value="Virgīniam sōlam in viā ambulantem servus Cornēliī prehendit">
+        <label for="q3a">Virgīniam sōlam in viā ambulantem servus Cornēliī prehendit</label><br>
+        <input type="checkbox" id="q3b" name="q3" value="ante oculōs multōrum: nēmō autem puellam iūvit">
+        <label for="q3b">ante oculōs multōrum: nēmō autem puellam iūvit</label><br>
+        <input type="checkbox" id="q3c" name="q3" value="suīs manibus eam rapuit">
+        <label for="q3c">suīs manibus eam rapuit</label><br>
+        <input type="checkbox" id="q3d" name="q3" value="iussit Virgīniam ā servō dūcī">
+        <label for="q3d">iussit Virgīniam ā servō dūcī</label><br>
+
+        <!-- Вопрос 4 -->
+        <p>4. Quid dictum est in colloquiō inter Virginium Claudiumque?</p>
+        <input type="checkbox" id="q4a" name="q4" value="Cornēlium, quī ausus est puellam rapere, factī suī puduit (< pudēre)">
+        <label for="q4a">Cornēlium, quī ausus est puellam rapere, factī suī puduit (< pudēre)</label><br>
+        <input type="checkbox" id="q4b" name="q4" value="Virgīnius iussit puellam, virginem probam, reddī">
+        <label for="q4b">Virgīnius iussit puellam, virginem probam, reddī</label><br>
+        <input type="checkbox" id="q4c" name="q4" value="Virgīnius, quī fuit dīvitissimus,  prō fīliā suā magnam pecūniam prōmīsit">
+        <label for="q4c">Virgīnius, quī fuit dīvitissimus,  prō fīliā suā magnam pecūniam prōmīsit</label><br>
+        <input type="checkbox" id="q4d" name="q4" value="Cornēlius Virgīnium, virum pauperem, contemnēbat neque eius verba cūrābat">
+        <label for="q4d">Cornēlius Virgīnium, virum pauperem, contemnēbat neque eius verba cūrābat</label><br>
+
+        <!-- Вопрос 5 -->
+        <p>5. Quid in fābulae fīne factum est?</p>
+        <input type="checkbox" id="q5a" name="q5" value="verbīs Virgīniī audītis, Claudius Virgīniam reddidit">
+        <label for="q5a">verbīs Virgīniī audītis, Claudius Virgīniam reddidit</label><br>
+        <input type="checkbox" id="q5b" name="q5" value="Virgīnius sē ipsum interfēcit ob fīliae dolōrem">
+        <label for="q5b">Virgīnius sē ipsum interfēcit ob fīliae dolōrem</label><br>
+        <input type="checkbox" id="q5c" name="q5" value="tōtā rē audīta, Rōmānī Claudium comprehendērunt">
+        <label for="q5c">tōtā rē audīta, Rōmānī Claudium comprehendērunt</label><br>
+        <input type="checkbox" id="q5d" name="q5" value="Virgīnius fīliam complexūs gladiō eam occīdit">
+        <label for="q5d">Virgīnius fīliam complexūs gladiō eam occīdit</label><br>
+        <input type="checkbox" id="q5e" name="q5" value="Virgīnius Claudium necāvit">
+        <label for="q5d">Virgīnius Claudium necāvit</label><br>
+    </form>
+    <p id="result"></p>
+
+    <br>
+    <button id="checkAnswers">recte an prave? </button>
+    <button id="showAnswers">solve omnia</button>
+    <button id="deleteAnswers">dele omnia</button>
+
+    <script>
+        const correctAnswers = {
+            q1: ["Virgīniī fīlia", "pulchra puella"],
+            q2: ["Virgīniō invidēbat pulchram puellam habentī"],
+            q3: ["ante oculōs multōrum: nēmō autem puellam iūvit", "iussit Virgīniam ā servō dūcī"],
+            q4: ["Virgīnius iussit puellam, virginem probam, reddī", "Cornēlius Virgīnium, virum pauperem, contemnēbat neque eius verba cūrābat"],
+            q5: ["tōtā rē audīta, Rōmānī Claudium comprehendērunt", "Virgīnius fīliam complexūs gladiō eam occīdit"]
+        };
+
+        function updateResultText(text) {
+            document.getElementById("result").innerHTML = text;
+        }
+
+        function clearStyles(checkboxes) {
+            checkboxes.forEach(checkbox => {
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+        }
+
+        document.getElementById("checkAnswers").addEventListener("click", function() {
+            let resultText = "";
+            let correctCount = 0;
+
+            for (let i = 1; i <= 5; i++) {
+                const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+                const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
+                const correct = correctAnswers[`q${i}`];
+
+                if (selectedValues.length === 0) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                } else if (selectedValues.every(val => correct.includes(val)) && selectedValues.length === correct.length) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Recte!</b><br>`;
+                    correctCount++;
+                } else {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                }
+            }
+
+            resultText += `<br>Ergo ${correctCount} ex 5 recta sunt.`;
+            updateResultText(resultText);
+        });
+
+        document.getElementById("showAnswers").addEventListener("click", function() {
+            for (let i = 1; i <= 5; i++) {
+                const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
+                const correct = correctAnswers[`q${i}`];
+
+                clearStyles(checkboxes);
+
+                checkboxes.forEach(checkbox => {
+                    if (correct.includes(checkbox.value)) {
+                        checkbox.nextElementSibling.classList.add("correct");
+                    } else if (!checkbox.checked) {
+                        checkbox.nextElementSibling.classList.add("incorrect");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("deleteAnswers").addEventListener("click", function() {
+            const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+            allCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+            updateResultText('');
+        });
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const questionNumber = this.name.charAt(1);
+                const allCheckboxes = document.querySelectorAll(`input[name="q${questionNumber}"]`);
+                clearStyles(allCheckboxes);
+            });
+        });
+    </script>
+</body>
+</html>
