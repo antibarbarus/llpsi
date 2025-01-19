@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitium 27.4.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            font-family: 'Fira Mono', monospace;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            font-family: 'Fira Mono', monospace;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+    <p><a href="index.html">< infra</a></p>
+    <h1>Exercitium 27.4.1</h1>
+    <h3><i>inter multa recta elige</i></h3>
+    <form id="quiz">
+        <!-- Вопрос 1 -->
+        <p>1. Quis fuit Comatas?</p>
+        <input type="checkbox" id="q1a" name="q1" value="una Musarum">
+        <label for="q1a">una Musarum</label><br>
+        <input type="checkbox" id="q1b" name="q1" value="servus Graecus">
+        <label for="q1b">servus Graecus</label><br>
+        <input type="checkbox" id="q1c" name="q1" value="pastor qui officium suum neglegebat">
+        <label for="q1c">pastor qui officium suum neglegebat</label><br>
+        <input type="checkbox" id="q1d" name="q1" value="nocte vigilans pecus custodiebat">
+        <label for="q1d">nocte vigilans pecus custodiebat</label><br>
+        
+        <!-- Вопрос 2 -->
+        <p>2. Quae sunt Musae?</p>
+        <input type="checkbox" id="q2a" name="q2" value="puellae haud pulchrae">
+        <label for="q2a">puellae haud pulchrae</label><br>
+        <input type="checkbox" id="q2b" name="q2" value="novem stellae quos Comatas nocte spectabat">
+        <label for="q2b">novem stellae quos Comatas nocte spectabat</label><br>
+        <input type="checkbox" id="q2c" name="q2" value="artium deae">
+        <label for="q2c">artium deae</label><br>
+        <input type="checkbox" id="q2d" name="q2" value="in Olympo habitantes">
+        <label for="q2d">in Olympo habitantes</label><br>
+       
+        <!-- Вопрос 3 -->
+        <p>3. Cur Comatae dominus iratissimus factus est?</p>
+        <input type="checkbox" id="q3a" name="q3" value="Comatas haedum in ara sacrificavit">
+        <label for="q3a">Comatas haedum in ara sacrificavit</label><br>
+        <input type="checkbox" id="q3b" name="q3" value="servo dormiente, haedus e grege effugit">
+        <label for="q3b">servo dormiente, haedus e grege effugit</label><br>
+        <input type="checkbox" id="q3c" name="q3" value="grex totus a servo effugit">
+        <label for="q3c">grex totus a servo effugit</label><br>
+        <input type="checkbox" id="q3d" name="q3" value="servum arcessivit neque ille ad dominum accessit">
+        <label for="q3d">servum arcessivit neque ille ad dominum accessit</label><br>
+
+        <!-- Вопрос 4 -->
+        <p>4. Quomodo dominus servum punivit?</p>
+        <input type="checkbox" id="q4a" name="q4" value="immo, laudatur a domino Comatas, quod Musis sacrificavit">
+        <label for="q4a">immo, laudatur a domino Comatas, quod Musis sacrificavit</label><br>
+        <input type="checkbox" id="q4b" name="q4" value="imperat ut Comatas sine mora gladio interficiatur">
+        <label for="q4b">imperat ut Comatas sine mora gladio interficiatur</label><br>
+        <input type="checkbox" id="q4c" name="q4" value="baculo severe verberabat">
+        <label for="q4c">baculo severe verberabat</label><br>
+        <input type="checkbox" id="q4d" name="q4" value="in arcam inclusit ubi vix spirari potest">
+        <label for="q4d">in arcam inclusit ubi vix spirari potest</label><br>
+
+        <!-- Вопрос 5 -->
+        <p>5. Quomodo Comatas vitam servavit?</p>
+        <input type="checkbox" id="q5a" name="q5" value="dominus consilium suum mutavit et, arca aperta, servum liberum fecit">
+        <label for="q5a">dominus consilium suum mutavit et, arca aperta, servum liberum fecit</label><br>
+        <input type="checkbox" id="q5b" name="q5" value="apes a Musis missae eum melle aluerunt">
+        <label for="q5b">apes a Musis missae eum melle aluerunt</label><br>
+        <input type="checkbox" id="q5c" name="q5" value="Musae ipsae ad arcam venerunt eamque aperuerunt">
+        <label for="q5c">Musae ipsae ad arcam venerunt eamque aperuerunt
+</label><br>
+ <input type="checkbox" id="q5d" name="q5" value="Comatas cibum per parvam rimam ab aliis servis accipiebat">
+        <label for="q5d">Comatas cibum per parvam rimam ab aliis servis accipiebat</label><br>
+         <input type="checkbox" id="q5e" name="q5" value="immo, in arca inclusus mortuus est">
+        <label for="q5e">immo, in arca inclusus mortuus est</label><br>
+
+<!-- Вопрос 6 -->
+        <p>6. Vita Comatae servata, quid factum est?</p>
+        <input type="checkbox" id="q6a" name="q6" value="Musae dominum Comatae interfecerunt">
+        <label for="q6a">Musae dominum Comatae interfecerunt</label><br>
+        <input type="checkbox" id="q6b" name="q6" value="Comatas dominum suum effugit laetusque cum Musis reliquam vitam agebat saltando et canendo">
+        <label for="q6b">Comatas dominum suum effugit laetusque cum Musis reliquam vitam agebat saltando et canendo</label><br>
+        <input type="checkbox" id="q6c" name="q6" value="alterum haedum emit, quem domino dedit pro haedo sacrificato">
+        <label for="q6c">alterum haedum emit, quem domino dedit pro haedo sacrificato</label><br>
+        <input type="checkbox" id="q6d" name="q6" value="tabernam petivit ibique haedum emit, quem iterum Musis sacrificavit">
+        <label for="q6d">tabernam petivit ibique haedum emit, quem iterum Musis sacrificavit</label><br>
+</label><br>
+    </form>
+    <p id="result"></p>
+
+    <br>
+    <button id="checkAnswers">recte an prave? </button>
+    <button id="showAnswers">solve omnia</button>
+    <button id="deleteAnswers">dele omnia</button>
+
+    <script>
+        const correctAnswers = {
+            q1: ["servus Graecus", "nocte vigilans pecus custodiebat"],
+            q2: ["artium deae", "in Olympo habitantes"],
+            q3: ["Comatas haedum in ara sacrificavit"],
+            q4: ["in arcam inclusit ubi vix spirari potest"],
+            q5: ["apes a Musis missae eum melle aluerunt"],
+            q6: ["tabernam petivit ibique haedum emit, quem iterum Musis sacrificavit"]
+        };
+        function updateResultText(text) {
+            document.getElementById("result").innerHTML = text;
+        }
+
+        function clearStyles(checkboxes) {
+            checkboxes.forEach(checkbox => {
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+        }
+
+        document.getElementById("checkAnswers").addEventListener("click", function() {
+            let resultText = "";
+            let correctCount = 0;
+
+            for (let i = 1; i <= 6; i++) {
+                const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+                const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
+                const correct = correctAnswers[`q${i}`];
+
+                if (selectedValues.length === 0) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                } else if (selectedValues.every(val => correct.includes(val)) && selectedValues.length === correct.length) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Recte!</b><br>`;
+                    correctCount++;
+                } else {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                }
+            }
+
+            resultText += `<br>Ergo ${correctCount} ex 6 recta sunt.`;
+            updateResultText(resultText);
+        });
+
+        document.getElementById("showAnswers").addEventListener("click", function() {
+            for (let i = 1; i <= 6; i++) {
+                const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
+                const correct = correctAnswers[`q${i}`];
+
+                clearStyles(checkboxes);
+
+                checkboxes.forEach(checkbox => {
+                    if (correct.includes(checkbox.value)) {
+                        checkbox.nextElementSibling.classList.add("correct");
+                    } else if (!checkbox.checked) {
+                        checkbox.nextElementSibling.classList.add("incorrect");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("deleteAnswers").addEventListener("click", function() {
+            const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+            allCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+            updateResultText('');
+        });
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const questionNumber = this.name.charAt(1);
+                const allCheckboxes = document.querySelectorAll(`input[name="q${questionNumber}"]`);
+                clearStyles(allCheckboxes);
+            });
+        });
+    </script>
+</body>
+</html>

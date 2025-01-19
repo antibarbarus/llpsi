@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitium 28.2.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            font-family: 'Fira Mono', monospace;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            font-family: 'Fira Mono', monospace;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+    <p><a href="index.html">< infra</a></p>
+    <h1>Exercitium 28.2.1</h1>
+    <h3><i>inter multa recta elige</i></h3>
+    <form id="quiz">
+        <!-- Вопрос 1 -->
+        <p>1. Quae fuit Veturia?</p>
+        <input type="checkbox" id="q1a" name="q1" value="uxor Coriolani">
+        <label for="q1a">uxor Coriolani</label><br>
+        <input type="checkbox" id="q1b" name="q1" value="Gaii Marcii mater">
+        <label for="q1b">Gaii Marcii mater</label><br>
+        <input type="checkbox" id="q1c" name="q1" value="urbs Volscorum">
+        <label for="q1c">urbs Volscorum</label><br>
+        <input type="checkbox" id="q1d" name="q1" value="terra in Latio">
+        <label for="q1d">terra in Latio</label><br>
+        
+        <!-- Вопрос 2 -->
+        <p>2. Quis fuit Gaius Marcius Coriolanus?</p>
+        <input type="checkbox" id="q2a" name="q2" value="senator Romanus">
+        <label for="q2a">senator Romanus</label><br>
+        <input type="checkbox" id="q2b" name="q2" value="dux qui Coriolos expugnavit">
+        <label for="q2b">dux qui Coriolos expugnavit</label><br>
+        <input type="checkbox" id="q2c" name="q2" value="Veturiae filius">
+        <label for="q2c">Veturiae filius</label><br>
+        <input type="checkbox" id="q2d" name="q2" value="rex Volscorum">
+        <label for="q2d">rex Volscorum</label><br>
+       
+        <!-- Вопрос 3 -->
+        <p>3. Coriolis expugnatis, quid factum est Coriolano?</p>
+        <input type="checkbox" id="q3a" name="q3" value="magnam tenuit Romae potestatem">
+        <label for="q3a">magnam tenuit Romae potestatem</label><br>
+        <input type="checkbox" id="q3b" name="q3" value="laudabatur primum ob magnam gloriam">
+        <label for="q3b">laudabatur primum ob magnam gloriam</label><br>
+        <input type="checkbox" id="q3c" name="q3" value="ad mortem est ductus">
+        <label for="q3c">ad mortem est ductus</label><br>
+        <input type="checkbox" id="q3d" name="q3" value="Roma est pulsus a civibus ei invidentibus">
+        <label for="q3d">Roma est pulsus a civibus ei invidentibus</label><br>
+
+        <!-- Вопрос 4 -->
+        <p>4. Quid egit Coriolanus Roma pulsus?</p>
+        <input type="checkbox" id="q4a" name="q4" value="ad Volscos confugit">
+        <label for="q4a">ad Volscos confugit</label><br>
+        <input type="checkbox" id="q4b" name="q4" value="oppugnavit Volscos ut Romanis ostenderet se Romam amaret">
+        <label for="q4b">oppugnavit Volscos ut Romanis ostenderet se Romam amaret</label><br>
+        <input type="checkbox" id="q4c" name="q4" value="Volscis persusait ut Romam oppugnaret">
+        <label for="q4c">Volscis persusait ut Romam oppugnaret</label><br>
+        <input type="checkbox" id="q4d" name="q4" value="ad Inferos discessit">
+        <label for="q4d">ad Inferos discessit</label><br>
+
+        <!-- Вопрос 5 -->
+        <p>5. Quomodo bellum inter Romanos Volscosque agebatur?</p>
+        <input type="checkbox" id="q5a" name="q5" value="Volsci, Coriolano duce, Romanis multis pugnis vicerunt">
+        <label for="q5a">Volsci, Coriolano duce, Romanis multis pugnis vicerunt</label><br>
+        <input type="checkbox" id="q5b" name="q5" value="Romani Coriolos expugnaverunt">
+        <label for="q5b">Romani Coriolos expugnaverunt</label><br>
+        <input type="checkbox" id="q5c" name="q5" value="Volsci Romanos inter urbis moenia tenuerunt cibo et aqua carentes">
+        <label for="q5c">Volsci Romanos inter urbis moenia tenuerunt cibo et aqua carentes</label><br>
+ <input type="checkbox" id="q5d" name="q4" value="Coriolano in pugna mortuo, Volsci ex agris Romanis discesserunt">
+        <label for="q5d">Coriolano in pugna mortuo, Volsci ex agris Romanis discesserunt
+</label><br>
+
+<!-- Вопрос 6 -->
+        <p>6. Cur Coriolanus consilium Romam oppugnandi mutavit?</p>
+        <input type="checkbox" id="q6a" name="q6" value="Volumina uxor precibus animum viri vicit">
+        <label for="q6a">Volumina uxor precibus animum viri vicit</label><br>
+        <input type="checkbox" id="q6b" name="q6" value="mater Veturia ad castra venit filiumque oravit ne Romae noceret">
+        <label for="q6b">mater Veturia ad castra venit filiumque oravit ne Romae noceret</label><br>
+        <input type="checkbox" id="q6c" name="q6" value="legati Romani ei persuaserunt ne patriam oppugnaret">
+        <label for="q6c">legati Romani ei persuaserunt ne patriam oppugnaret</label><br>
+        <input type="checkbox" id="q6d" name="q6" value="quamquam e finibus eiectus est, patriam multum curabat">
+        <label for="q6d">quamquam e finibus eiectus est, patriam multum curabat</label><br>
+    </form>
+    <p id="result"></p>
+
+    <br>
+    <button id="checkAnswers">recte an prave? </button>
+    <button id="showAnswers">solve omnia</button>
+    <button id="deleteAnswers">dele omnia</button>
+
+    <script>
+        const correctAnswers = {
+            q1: ["Gaii Marcii mater"],
+            q2: ["dux qui Coriolos expugnavit", "Veturiae filius"],
+            q3: ["magnam tenuit Romae potestatem", "laudabatur primum ob magnam gloriam", "Roma est pulsus a civibus ei invidentibus"],
+            q4: ["ad Volscos confugit", "Volscis persusait ut Romam oppugnaret"],
+            q5: ["Volsci, Coriolano duce, Romanis multis pugnis vicerunt", "Volsci Romanos inter urbis moenia tenuerunt cibo et aqua carentes"],
+            q6: ["Volumina uxor precibus animum viri vicit", "mater Veturia ad castra venit filiumque oravit ne Romae noceret"]
+        };
+        function updateResultText(text) {
+            document.getElementById("result").innerHTML = text;
+        }
+
+        function clearStyles(checkboxes) {
+            checkboxes.forEach(checkbox => {
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+        }
+
+        document.getElementById("checkAnswers").addEventListener("click", function() {
+            let resultText = "";
+            let correctCount = 0;
+
+            for (let i = 1; i <= 6; i++) {
+                const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+                const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
+                const correct = correctAnswers[`q${i}`];
+
+                if (selectedValues.length === 0) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                } else if (selectedValues.every(val => correct.includes(val)) && selectedValues.length === correct.length) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Recte!</b><br>`;
+                    correctCount++;
+                } else {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                }
+            }
+
+            resultText += `<br>Ergo ${correctCount} ex 6 recta sunt.`;
+            updateResultText(resultText);
+        });
+
+        document.getElementById("showAnswers").addEventListener("click", function() {
+            for (let i = 1; i <= 6; i++) {
+                const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
+                const correct = correctAnswers[`q${i}`];
+
+                clearStyles(checkboxes);
+
+                checkboxes.forEach(checkbox => {
+                    if (correct.includes(checkbox.value)) {
+                        checkbox.nextElementSibling.classList.add("correct");
+                    } else if (!checkbox.checked) {
+                        checkbox.nextElementSibling.classList.add("incorrect");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("deleteAnswers").addEventListener("click", function() {
+            const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+            allCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+            updateResultText('');
+        });
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const questionNumber = this.name.charAt(1);
+                const allCheckboxes = document.querySelectorAll(`input[name="q${questionNumber}"]`);
+                clearStyles(allCheckboxes);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitium 26.5.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            font-family: 'Fira Mono', monospace;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            font-family: 'Fira Mono', monospace;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+    <p><a href="index.html">< infra</a></p>
+    <h1>Exercitium 26.5.1</h1>
+    <h3><i>inter multa recta elige</i></h3>
+    <form id="quiz">
+        <!-- Вопрос 1 -->
+        <p>1. Quī fuērunt Sabīnī?</p>
+        <input type="checkbox" id="q1a" name="q1" value="in Ītaliā habitantēs">
+        <label for="q1a">in Ītaliā habitantēs</label><br>
+        <input type="checkbox" id="q1b" name="q1" value="mīlitēs in exercitū Rōmānō pugnantēs">
+        <label for="q1b">mīlitēs in exercitū Rōmānō pugnantēs</label><br>
+        <input type="checkbox" id="q1c" name="q1" value="mīlitēs Rōmam oppugnantēs">
+        <label for="q1c">mīlitēs Rōmam oppugnantēs</label><br>
+        <input type="checkbox" id="q1d" name="q1" value="Rōmānōrum hostēs">
+        <label for="q1d">Rōmānōrum hostēs</label><br>
+        
+        <!-- Вопрос 2 -->
+        <p>3. Quae fuit Tarpēia puella??</p>
+        <input type="checkbox" id="q2a" name="q2" value="in castrīs Sabīnōrum habitābat">
+        <label for="q2a">in castrīs Sabīnōrum habitābat</label><br>
+        <input type="checkbox" id="q2b" name="q2" value="cupida ōrnāmenta Sabīnōrum habendī">
+        <label for="q2b">cupida ōrnāmenta Sabīnōrum habendī</label><br>
+        <input type="checkbox" id="q2c" name="q2" value="Rōmam dēfendēbat cum aliīs Rōmānīs">
+        <label for="q2c">Rōmam dēfendēbat cum aliīs Rōmānīs</label><br>
+        <input type="checkbox" id="q2d" name="q2" value="hostēs Rōmānōrum adiuvābat">
+        <label for="q2d">hostēs Rōmānōrum adiuvābat</label><br>
+       
+        <!-- Вопрос 3 -->
+        <p>3. Quid Sabīnōrum Tarpēia maximē cupiēbat?</p>
+        <input type="checkbox" id="q3a" name="q3" value="galeās">
+        <label for="q3a">galeās</label><br>
+        <input type="checkbox" id="q3b" name="q3" value="nummōs">
+        <label for="q3b">nummōs</label><br>
+        <input type="checkbox" id="q3c" name="q3" value="armillās">
+        <label for="q3c">armillās</label><br>
+        <input type="checkbox" id="q3d" name="q3" value="amōrem">
+        <label for="q3d">amōrem</label><br>
+
+        <!-- Вопрос 4 -->
+        <p>4. Quid accidit postquam Tarpēia ad castra Sabīnōrum pervēnit?</p>
+        <input type="checkbox" id="q4a" name="q4" value="auxiliō Tarpēiae Sabīnī Rōmānōs vīcērunt">
+        <label for="q4a">auxiliō Tarpēiae Sabīnī Rōmānōs vīcērunt</label><br>
+        <input type="checkbox" id="q4b" name="q4" value="Tarpēia dē hostium cōnsiliō Rōmānōs monuit, quī urbem dēfendere potuērunt">
+        <label for="q4b">Tarpēia dē hostium cōnsiliō Rōmānōs monuit, quī urbem dēfendere potuērunt</label><br>
+        <input type="checkbox" id="q4c" name="q4" value="Sabīnīs victīs, Rōmānī magnam praedam cēpērunt">
+        <label for="q4c">Sabīnīs victīs, Rōmānī magnam praedam cēpērunt</label><br>
+        <input type="checkbox" id="q4d" name="q4" value="Rōmānīs interfectīs, Sabīnī Rōmae manēbant neque domum revertī volēbant">
+        <label for="q4d">Rōmānīs interfectīs, Sabīnī Rōmae manēbant neque domum revertī volēbant</label><br>
+        <input type="checkbox" id="q4e" name="q4" value="urbe captā, Sabīnī multa aedificia ignī dedērunt ac rēs pretiōsās abstulērunt
+">
+        <label for="q4e">urbe captā, Sabīnī multa aedificia ignī dedērunt ac rēs pretiōsās abstulērunt
+</label><br>
+
+        <!-- Вопрос 5 -->
+        <p>5. Urbe captā, quid agunt Sabīnī?</p>
+        <input type="checkbox" id="q5a" name="q5" value="quamquam Tarpēia auxilium iīs tulit, puellam improbam sevērē pūnīvērunt">
+        <label for="q5a">quamquam Tarpēia auxilium iīs tulit, puellam improbam sevērē pūnīvērunt</label><br>
+        <input type="checkbox" id="q5b" name="q5" value="urbem captandō dēlectātī, Tarpēiae praemia pretiōsam dedērunt">
+        <label for="q5b">urbem captandō dēlectātī, Tarpēiae praemia pretiōsam dedērunt</label><br>
+        <input type="checkbox" id="q5c" name="q5" value="Sabīnī Rōmam ingredientēs Tarpēiam forte interfēcerant; posthāc eius morte maerēbant">
+        <label for="q5c">Sabīnī Rōmam ingredientēs Tarpēiam forte interfēcerant; posthāc eius morte maerēbant
+</label><br>
+
+<!-- Вопрос 6 -->
+        <p>6. Urbe captā, quid agunt Sabīnī?</p>
+        <input type="checkbox" id="q6a" name="q6" value="ita vērō, dedērunt enim ea quae in bracchiīs sinistrīs gerēbant">
+        <label for="q6a">ita vērō, dedērunt enim ea quae in bracchiīs sinistrīs gerēbant</label><br>
+        <input type="checkbox" id="q6b" name="q6" value="minimē vērō, nam scūtīs eam oppressērunt neque armillās prōmissās dedērunt">
+        <label for="q6b">minimē vērō, nam scūtīs eam oppressērunt neque armillās prōmissās dedērunt</label><br>
+</label><br>
+    </form>
+    <p id="result"></p>
+
+    <br>
+    <button id="checkAnswers">recte an prave? </button>
+    <button id="showAnswers">solve omnia</button>
+    <button id="deleteAnswers">dele omnia</button>
+
+    <script>
+        const correctAnswers = {
+            q1: ["in Ītaliā habitantēs", "mīlitēs Rōmam oppugnantēs", "Rōmānōrum hostēs"],
+            q2: ["cupida ōrnāmenta Sabīnōrum habendī", "hostēs Rōmānōrum adiuvābat"],
+            q3: ["armillās"],
+            q4: ["auxiliō Tarpēiae Sabīnī Rōmānōs vīcērunt", "urbe captā, Sabīnī multa aedificia ignī dedērunt ac rēs pretiōsās abstulērunt"],
+            q5: ["quamquam Tarpēia auxilium iīs tulit, puellam improbam sevērē pūnīvērunt"],
+            q6: ["ita vērō, dedērunt enim ea quae in bracchiīs sinistrīs gerēbant"]
+        };
+
+        function updateResultText(text) {
+            document.getElementById("result").innerHTML = text;
+        }
+
+        function clearStyles(checkboxes) {
+            checkboxes.forEach(checkbox => {
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+        }
+
+        document.getElementById("checkAnswers").addEventListener("click", function() {
+            let resultText = "";
+            let correctCount = 0;
+
+            for (let i = 1; i <= 6; i++) {
+                const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+                const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
+                const correct = correctAnswers[`q${i}`];
+
+                if (selectedValues.length === 0) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                } else if (selectedValues.every(val => correct.includes(val)) && selectedValues.length === correct.length) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Recte!</b><br>`;
+                    correctCount++;
+                } else {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                }
+            }
+
+            resultText += `<br>Ergo ${correctCount} ex 6 recta sunt.`;
+            updateResultText(resultText);
+        });
+
+        document.getElementById("showAnswers").addEventListener("click", function() {
+            for (let i = 1; i <= 6; i++) {
+                const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
+                const correct = correctAnswers[`q${i}`];
+
+                clearStyles(checkboxes);
+
+                checkboxes.forEach(checkbox => {
+                    if (correct.includes(checkbox.value)) {
+                        checkbox.nextElementSibling.classList.add("correct");
+                    } else if (!checkbox.checked) {
+                        checkbox.nextElementSibling.classList.add("incorrect");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("deleteAnswers").addEventListener("click", function() {
+            const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+            allCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+            updateResultText('');
+        });
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const questionNumber = this.name.charAt(1);
+                const allCheckboxes = document.querySelectorAll(`input[name="q${questionNumber}"]`);
+                clearStyles(allCheckboxes);
+            });
+        });
+    </script>
+</body>
+</html>

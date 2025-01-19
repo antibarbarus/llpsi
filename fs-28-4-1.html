@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitium 28.4.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            font-family: 'Fira Mono', monospace;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            font-family: 'Fira Mono', monospace;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+    <p><a href="index.html">< infra</a></p>
+    <h1>Exercitium 28.4.1</h1>
+    <h3><i>inter multa recta elige</i></h3>
+    <form id="quiz">
+        <!-- Вопрос 1 -->
+        <p>1. Quis fuit Cyparissus?</p>
+        <input type="checkbox" id="q1a" name="q1" value="cervus magnis cornibus">
+        <label for="q1a">cervus magnis cornibus</label><br>
+        <input type="checkbox" id="q1b" name="q1" value="Nympha pulcherrima">
+        <label for="q1b">Nympha pulcherrima</label><br>
+        <input type="checkbox" id="q1c" name="q1" value="puer ab Apolline dilectus">
+        <label for="q1c">puer ab Apolline dilectus</label><br>
+        <input type="checkbox" id="q1d" name="q1" value="adulescens formosissimus">
+        <label for="q1d">adulescens formosissimus</label><br>
+        
+        <!-- Вопрос 2 -->
+        <p>2. Quid Cyparissus cervusque agebant?</p>
+        <input type="checkbox" id="q2a" name="q2" value="cervus adulescentem in tergo sedentem tamquam equus huc illuc vehebat">
+        <label for="q2a">cervus adulescentem in tergo sedentem tamquam equus huc illuc vehebat</label><br>
+        <input type="checkbox" id="q2b" name="q2" value="Cyparissus cervi cornua auro gemmisque ornabat">
+        <label for="q2b">Cyparissus cervi cornua auro gemmisque ornabat</label><br>
+        <input type="checkbox" id="q2c" name="q2" value="adulescens cervum ad campos fluviosque agebat">
+        <label for="q2c">adulescens cervum ad campos fluviosque agebat</label><br>
+        <input type="checkbox" id="q2d" name="q2" value="Cyparissus cervum ad hominum domos ducere solebat ut collum eius tangerent">
+        <label for="q2d">Cyparissus cervum ad hominum domos ducere solebat ut collum eius tangerent</label><br>
+       
+        <!-- Вопрос 3 -->
+        <p>3. Quid cervo accidit?</p>
+        <input type="checkbox" id="q3a" name="q3" value="Cyparissus arcu ludens cervum forte interfecit">
+        <label for="q3a">Cyparissus arcu ludens cervum forte interfecit</label><br>
+        <input type="checkbox" id="q3b" name="q3" value="Cyparissus cervum in terra herbosa iacentem reliquit neque umquam invenit">
+        <label for="q3b">Cyparissus cervum in terra herbosa iacentem reliquit neque umquam invenit</label><br>
+        <input type="checkbox" id="q3c" name="q3" value="Apollo cervum sagitta percussit">
+        <label for="q3c">Apollo cervum sagitta percussit</label><br>
+        <input type="checkbox" id="q3d" name="q3" value="cervus Cyparissum morientem videns cum eo mori voluit">
+        <label for="q3d">cervus Cyparissum morientem videns cum eo mori voluit</label><br>
+
+        <!-- Вопрос 4 -->
+        <p>4. Cervo mortuo, quid accidit adulescenti?</p>
+        <input type="checkbox" id="q4a" name="q4" value="Apollo amico dilecto adesse conabatur, neque verbis consolari potuit">
+        <label for="q4a">Apollo amico dilecto adesse conabatur, neque verbis consolari potuit</label><br>
+        <input type="checkbox" id="q4b" name="q4" value="Cyparissus maestus ad bestiae sepulcrum cotidie veniebat">
+        <label for="q4b">Cyparissus maestus ad bestiae sepulcrum cotidie veniebat</label><br>
+        <input type="checkbox" id="q4c" name="q4" value="tam multis cum lacrimis flebat adulescens ut flumen rapidum fieret">
+        <label for="q4c">tam multis cum lacrimis flebat adulescens ut flumen rapidum fieret</label><br>
+        <input type="checkbox" id="q4d" name="q4" value="Cyparissus ob bestiae mortem se ipsum interfecit">
+        <label for="q4d">Cyparissus ob bestiae mortem se ipsum interfecit</label><br>
+        <input type="checkbox" id="q4e" name="q4" value="arboris formam accepit ob animi dolorem">
+        <label for="q4e">arboris formam accepit ob animi dolorem</label><br>
+
+
+        <!-- Вопрос 5 -->
+        <p>5. Cupressus est arbor…</p>
+        <input type="checkbox" id="q5a" name="q5" value="viridis coloris">
+        <label for="q5a">viridis coloris</label><br>
+        <input type="checkbox" id="q5b" name="q5" value="candidae frontis">
+        <label for="q5b">candidae frontis</label><br>
+        <input type="checkbox" id="q5c" name="q5" value="stellis ornata">
+        <label for="q5c">stellis ornata</label><br>
+ <input type="checkbox" id="q5d" name="q5" value="alta et rigida">
+        <label for="q5d">alta et rigida
+</label><br>
+        <input type="checkbox" id="q5e" name="q5" value="prope amicorum sepulcra posita">
+        <label for="q5e">prope amicorum sepulcra posita
+</label><br>
+    </form>
+    <p id="result"></p>
+
+    <br>
+    <button id="checkAnswers">recte an prave? </button>
+    <button id="showAnswers">solve omnia</button>
+    <button id="deleteAnswers">dele omnia</button>
+
+    <script>
+        const correctAnswers = {
+            q1: ["puer ab Apolline dilectus", "adulescens formosissimus"],
+            q2: ["cervus adulescentem in tergo sedentem tamquam equus huc illuc vehebat", "adulescens cervum ad campos fluviosque agebat"],
+            q3: ["Cyparissus arcu ludens cervum forte interfecit"],
+            q4: ["Apollo amico dilecto adesse conabatur, neque verbis consolari potuit", "arboris formam accepit ob animi dolorem"],
+            q5: ["alta et rigida", "prope amicorum sepulcra posita"],
+        };
+        function updateResultText(text) {
+            document.getElementById("result").innerHTML = text;
+        }
+
+        function clearStyles(checkboxes) {
+            checkboxes.forEach(checkbox => {
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+        }
+
+        document.getElementById("checkAnswers").addEventListener("click", function() {
+            let resultText = "";
+            let correctCount = 0;
+
+            for (let i = 1; i <= 5; i++) {
+                const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+                const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
+                const correct = correctAnswers[`q${i}`];
+
+                if (selectedValues.length === 0) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                } else if (selectedValues.every(val => correct.includes(val)) && selectedValues.length === correct.length) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Recte!</b><br>`;
+                    correctCount++;
+                } else {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                }
+            }
+
+            resultText += `<br>Ergo ${correctCount} ex 5 recta sunt.`;
+            updateResultText(resultText);
+        });
+
+        document.getElementById("showAnswers").addEventListener("click", function() {
+            for (let i = 1; i <= 6; i++) {
+                const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
+                const correct = correctAnswers[`q${i}`];
+
+                clearStyles(checkboxes);
+
+                checkboxes.forEach(checkbox => {
+                    if (correct.includes(checkbox.value)) {
+                        checkbox.nextElementSibling.classList.add("correct");
+                    } else if (!checkbox.checked) {
+                        checkbox.nextElementSibling.classList.add("incorrect");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("deleteAnswers").addEventListener("click", function() {
+            const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+            allCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+            updateResultText('');
+        });
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const questionNumber = this.name.charAt(1);
+                const allCheckboxes = document.querySelectorAll(`input[name="q${questionNumber}"]`);
+                clearStyles(allCheckboxes);
+            });
+        });
+    </script>
+</body>
+</html>

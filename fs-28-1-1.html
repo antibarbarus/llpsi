@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitium 28.1.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            font-family: 'Fira Mono', monospace;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            font-family: 'Fira Mono', monospace;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+    <p><a href="index.html">< infra</a></p>
+    <h1>Exercitium 28.1.1</h1>
+    <h3><i>inter multa recta elige</i></h3>
+    <form id="quiz">
+        <!-- Вопрос 1 -->
+        <p>1. Quae fuit Atalanta?</p>
+        <input type="checkbox" id="q1a" name="q1" value="una ex Dianae nymphis">
+        <label for="q1a">una ex Dianae nymphis</label><br>
+        <input type="checkbox" id="q1b" name="q1" value="virgo quae maritum cupiebat nec vero probum reperire poterat">
+        <label for="q1b">virgo quae maritum cupiebat nec vero probum reperire poterat</label><br>
+        <input type="checkbox" id="q1c" name="q1" value="puella quae ‘se in matrimonium ab ullo viro duci’ nolebat">
+        <label for="q1c">puella quae ‘se in matrimonium ab ullo viro duci’ nolebat</label><br>
+        <input type="checkbox" id="q1d" name="q1" value="tam bene artem currendi noverat ut vento esset celerius">
+        <label for="q1d">tam bene artem currendi noverat ut vento esset celerius</label><br>
+        
+        <!-- Вопрос 2 -->
+        <p>2. Quomodo constituit Atalanta omnes qui eam petebant viros dimittere?</p>
+        <input type="checkbox" id="q2a" name="q2" value="Atalanta viros currentes ex colle prospiciebat: victor puellam uxorem ducat, ceteri sunt morituri">
+        <label for="q2a">Atalanta viros currentes ex colle prospiciebat: victor puellam uxorem ducat, ceteri sunt morituri</label><br>
+        <input type="checkbox" id="q2b" name="q2" value="vino in pocula fuso, omnes bibentes interfecti sunt; fuit enim vinum quod mortem attulit">
+        <label for="q2b">vino in pocula fuso, omnes bibentes interfecti sunt; fuit enim vinum quod mortem attulit</label><br>
+        <input type="checkbox" id="q2c" name="q2" value="viros in currrendo vincere volebat atque omnes victos necare">
+        <label for="q2c">viros in currrendo vincere volebat atque omnes victos necare</label><br>
+       
+        <!-- Вопрос 3 -->
+        <p>3. Cur Hippomenes consilium currendi cepit?</p>
+        <input type="checkbox" id="q3a" name="q3" value="Atalanta ei pulcherrima esse videbatur omnium feminarum, quas umquam viderat">
+        <label for="q3a">Atalanta ei pulcherrima esse videbatur omnium feminarum, quas umquam viderat</label><br>
+        <input type="checkbox" id="q3b" name="q3" value="nesciebat Atalantam iubere omnes victos inerfici">
+        <label for="q3b">nesciebat Atalantam iubere omnes victos inerfici</label><br>
+        <input type="checkbox" id="q3c" name="q3" value="puer superbus Atalantam debilem esse existimabat">
+        <label for="q3c">puer superbus Atalantam debilem esse existimabat</label><br>
+        <input type="checkbox" id="q3d" name="q3" value="Venus ei persuasit ‘Atalantam facile vinci posse’">
+        <label for="q3d">Venus ei persuasit ‘Atalantam facile vinci posse’</label><br>
+
+        <!-- Вопрос 4 -->
+        <p>4. Quid Atalanta, puerum intuens, censebat ac dicebat?</p>
+        <input type="checkbox" id="q4a" name="q4" value="sperabat adulescentem victurum esse; tam enim pulcher erat visu">
+        <label for="q4a">sperabat adulescentem victurum esse; tam enim pulcher erat visu</label><br>
+        <input type="checkbox" id="q4b" name="q4" value="sine cursu contituit eius uxor fieri">
+        <label for="q4b">sine cursu contituit eius uxor fieri</label><br>
+        <input type="checkbox" id="q4c" name="q4" value="adulescentem esse deum existimabat">
+        <label for="q4c">adulescentem esse deum existimabat</label><br>
+        <input type="checkbox" id="q4d" name="q4" value="puero persuadere conabatur, ne vitam currendo amitteret">
+        <label for="q4d">puero persuadere conabatur, ne vitam currendo amitteret</label><br>
+
+        <!-- Вопрос 5 -->
+        <p>5. Quod auxilium Venus puero tulit?</p>
+        <input type="checkbox" id="q5a" name="q5" value="mala mirabilia dederat; quibus sumptis, corpus Hippomenae multo validius factum est">
+        <label for="q5a">mala mirabilia dederat; quibus sumptis, corpus Hippomenae multo validius factum est</label><br>
+        <input type="checkbox" id="q5b" name="q5" value="tria mala aurea puero dedit ut ea iaceret neve vinceret Atalanta">
+        <label for="q5b">tria mala aurea puero dedit ut ea iaceret neve vinceret Atalanta</label><br>
+        <input type="checkbox" id="q5c" name="q5" value="ipsa dea de caelo mala iaciebat, ut moram faceret puella">
+        <label for="q5c">ipsa dea de caelo mala iaciebat, ut moram faceret puella</label><br>
+ <input type="checkbox" id="q5d" name="q4" value="fecit ut Atalanta puerum amaret; amore capta, puella constitit ut ille primus metam consequeretur">
+        <label for="q5d">fecit ut Atalanta puerum amaret; amore capta, puella constitit ut ille primus metam consequeretur</label><br>
+
+<!-- Вопрос 6 -->
+        <p>6. Quid in fine fabulae factum est?</p>
+        <input type="checkbox" id="q6a" name="q6" value="Atalanta prima ad metam cucurrerat, puer vero sine mora interfectus est">
+        <label for="q6a">Atalanta prima ad metam cucurrerat, puer vero sine mora interfectus est</label><br>
+        <input type="checkbox" id="q6b" name="q6" value="Hippomenes primus ad metam cucurrerat, vitam servavit puellamque in matrimonium duxit">
+        <label for="q6b">Hippomenes primus ad metam cucurrerat, vitam servavit puellamque in matrimonium duxit</label><br>
+        <input type="checkbox" id="q6c" name="q6" value="Atalanta et Hippomenes eodem tempore metam consecuti sunt">
+        <label for="q6c">Atalanta et Hippomenes eodem tempore metam consecuti sunt</label><br>
+        <input type="checkbox" id="q6d" name="q6" value="Hippomenes vitam quidem servavit nec vero Atalantam uxorem duxit">
+        <label for="q6d">Hippomenes vitam quidem servavit nec vero Atalantam uxorem duxit</label><br>
+    </form>
+    <p id="result"></p>
+
+    <br>
+    <button id="checkAnswers">recte an prave? </button>
+    <button id="showAnswers">solve omnia</button>
+    <button id="deleteAnswers">dele omnia</button>
+
+    <script>
+        const correctAnswers = {
+            q1: ["puella quae ‘se in matrimonium ab ullo viro duci’ nolebat", "tam bene artem currendi noverat ut vento esset celerius"],
+            q2: ["viros in currrendo vincere volebat atque omnes victos necare"],
+            q3: ["Atalanta ei pulcherrima esse videbatur omnium feminarum, quas umquam viderat"],
+            q4: ["sperabat adulescentem victurum esse; tam enim pulcher erat visu", "puero persuadere conabatur, ne vitam currendo amitteret"],
+            q5: ["tria mala aurea puero dedit ut ea iaceret neve vinceret Atalanta"],
+            q6: ["Hippomenes primus ad metam cucurrerat, vitam servavit puellamque in matrimonium duxit"]
+        };
+        function updateResultText(text) {
+            document.getElementById("result").innerHTML = text;
+        }
+
+        function clearStyles(checkboxes) {
+            checkboxes.forEach(checkbox => {
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+        }
+
+        document.getElementById("checkAnswers").addEventListener("click", function() {
+            let resultText = "";
+            let correctCount = 0;
+
+            for (let i = 1; i <= 6; i++) {
+                const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+                const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
+                const correct = correctAnswers[`q${i}`];
+
+                if (selectedValues.length === 0) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                } else if (selectedValues.every(val => correct.includes(val)) && selectedValues.length === correct.length) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Recte!</b><br>`;
+                    correctCount++;
+                } else {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                }
+            }
+
+            resultText += `<br>Ergo ${correctCount} ex 6 recta sunt.`;
+            updateResultText(resultText);
+        });
+
+        document.getElementById("showAnswers").addEventListener("click", function() {
+            for (let i = 1; i <= 6; i++) {
+                const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
+                const correct = correctAnswers[`q${i}`];
+
+                clearStyles(checkboxes);
+
+                checkboxes.forEach(checkbox => {
+                    if (correct.includes(checkbox.value)) {
+                        checkbox.nextElementSibling.classList.add("correct");
+                    } else if (!checkbox.checked) {
+                        checkbox.nextElementSibling.classList.add("incorrect");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("deleteAnswers").addEventListener("click", function() {
+            const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+            allCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+            updateResultText('');
+        });
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const questionNumber = this.name.charAt(1);
+                const allCheckboxes = document.querySelectorAll(`input[name="q${questionNumber}"]`);
+                clearStyles(allCheckboxes);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitium 27.5.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            font-family: 'Fira Mono', monospace;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            font-family: 'Fira Mono', monospace;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+    <p><a href="index.html">< infra</a></p>
+    <h1>Exercitium 27.5.1</h1>
+    <h3><i>inter multa recta elige</i></h3>
+    <form id="quiz">
+        <!-- Вопрос 1 -->
+        <p>1. Quis fuit Comatas?</p>
+        <input type="checkbox" id="q1a" name="q1" value="Apollinis corvus">
+        <label for="q1a">Apollinis corvus</label><br>
+        <input type="checkbox" id="q1b" name="q1" value="virgo formosa">
+        <label for="q1b">virgo formosa</label><br>
+        <input type="checkbox" id="q1c" name="q1" value="dea pulchritudinis">
+        <label for="q1c">dea pulchritudinis</label><br>
+        <input type="checkbox" id="q1d" name="q1" value="puella quae Apollinem non amabat">
+        <label for="q1d">puella quae Apollinem non amabat</label><br>
+        
+        <!-- Вопрос 2 -->
+        <p>2. Quomodo deus amorem ei monstrabat?</p>
+        <input type="checkbox" id="q2a" name="q2" value="verbis magnificis laudabat">
+        <label for="q2a">verbis magnificis laudabat</label><br>
+        <input type="checkbox" id="q2b" name="q2" value="ornamenta pulcherrima dabat">
+        <label for="q2b">ornamenta pulcherrima dabat</label><br>
+        <input type="checkbox" id="q2c" name="q2" value="in summum Olympum ducebat">
+        <label for="q2c">in summum Olympum ducebat</label><br>
+        <input type="checkbox" id="q2d" name="q2" value="sagittam in eam misit">
+        <label for="q2d">sagittam in eam misit</label><br>
+       
+        <!-- Вопрос 3 -->
+        <p>3. Quid autem Coronis sentiebat?</p>
+        <input type="checkbox" id="q3a" name="q3" value="donis Apollinis laetabatur">
+        <label for="q3a">donis Apollinis laetabatur</label><br>
+        <input type="checkbox" id="q3b" name="q3" value="occultabat se Apollinem amare">
+        <label for="q3b">occultabat se Apollinem amare</label><br>
+        <input type="checkbox" id="q3c" name="q3" value="alio viro amorem dedit">
+        <label for="q3c">alio viro amorem dedit</label><br>
+        <input type="checkbox" id="q3d" name="q3" value="Apollinis corvum oderat">
+        <label for="q3d">Apollinis corvum oderat</label><br>
+
+        <!-- Вопрос 4 -->
+        <p>4. Quid Apollini corvus dixit?</p>
+        <input type="checkbox" id="q4a" name="q4" value="se Coronidem curare">
+        <label for="q4a">se Coronidem curare</label><br>
+        <input type="checkbox" id="q4b" name="q4" value="se cum puella in silvis ludere">
+        <label for="q4b">se cum puella in silvis ludere</label><br>
+        <input type="checkbox" id="q4c" name="q4" value="Coronidem alterum virum amare">
+        <label for="q4c">Coronidem alterum virum amare</label><br>
+        <input type="checkbox" id="q4d" name="q4" value="se Apollinem odisse">
+        <label for="q4d">se Apollinem odisse</label><br>
+
+        <!-- Вопрос 5 -->
+        <p>5. Quid Coronidi fecit Apollo?</p>
+        <input type="checkbox" id="q5a" name="q5" value="missa sagitta occidit">
+        <label for="q5a">missa sagitta occidit</label><br>
+        <input type="checkbox" id="q5b" name="q5" value="in corvum nigrum convertit">
+        <label for="q5b">in corvum nigrum convertit</label><br>
+        <input type="checkbox" id="q5c" name="q5" value="puella mortua, herbis sanare conatus est, sed frustra">
+        <label for="q5c">puella mortua, herbis sanare conatus est, sed frustra</label><br>
+ <input type="checkbox" id="q5d" name="q4" value="puellam, quamquam facti eius paenituit, in silvis deseruit">
+        <label for="q5d">puellam, quamquam facti eius paenituit, in silvis deseruit</label><br>
+
+<!-- Вопрос 6 -->
+        <p>6. Quid vero corvo fecit deus?</p>
+        <input type="checkbox" id="q6a" name="q6" value="avem improbam necavit">
+        <label for="q6a">avem improbam necavit</label><br>
+        <input type="checkbox" id="q6b" name="q6" value="multum laudavit, quod corvus de Coronide verum dixit">
+        <label for="q6b">multum laudavit, quod corvus de Coronide verum dixit</label><br>
+        <input type="checkbox" id="q6c" name="q6" value="pennarum colorem mutavit">
+        <label for="q6c">pennarum colorem mutavit</label><br>
+        <input type="checkbox" id="q6d" name="q6" value="punire constituit: pennas eius nigras in albas convertit">
+        <label for="q6d">punire constituit: pennas eius nigras in albas convertit</label><br>
+    </form>
+    <p id="result"></p>
+
+    <br>
+    <button id="checkAnswers">recte an prave? </button>
+    <button id="showAnswers">solve omnia</button>
+    <button id="deleteAnswers">dele omnia</button>
+
+    <script>
+        const correctAnswers = {
+            q1: ["virgo formosa", "puella quae Apollinem non amabat"],
+            q2: ["verbis magnificis laudabat", "ornamenta pulcherrima dabat"],
+            q3: ["donis Apollinis laetabatur", "alio viro amorem dedit"],
+            q4: ["Coronidem alterum virum amare"],
+            q5: ["missa sagitta occidit", "puella mortua, herbis sanare conatus est, sed frustra"],
+            q6: ["pennarum colorem mutavit", "punire constituit: pennas eius nigras in albas convertit"]
+        };
+        function updateResultText(text) {
+            document.getElementById("result").innerHTML = text;
+        }
+
+        function clearStyles(checkboxes) {
+            checkboxes.forEach(checkbox => {
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+        }
+
+        document.getElementById("checkAnswers").addEventListener("click", function() {
+            let resultText = "";
+            let correctCount = 0;
+
+            for (let i = 1; i <= 6; i++) {
+                const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+                const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
+                const correct = correctAnswers[`q${i}`];
+
+                if (selectedValues.length === 0) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                } else if (selectedValues.every(val => correct.includes(val)) && selectedValues.length === correct.length) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Recte!</b><br>`;
+                    correctCount++;
+                } else {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                }
+            }
+
+            resultText += `<br>Ergo ${correctCount} ex 6 recta sunt.`;
+            updateResultText(resultText);
+        });
+
+        document.getElementById("showAnswers").addEventListener("click", function() {
+            for (let i = 1; i <= 6; i++) {
+                const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
+                const correct = correctAnswers[`q${i}`];
+
+                clearStyles(checkboxes);
+
+                checkboxes.forEach(checkbox => {
+                    if (correct.includes(checkbox.value)) {
+                        checkbox.nextElementSibling.classList.add("correct");
+                    } else if (!checkbox.checked) {
+                        checkbox.nextElementSibling.classList.add("incorrect");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("deleteAnswers").addEventListener("click", function() {
+            const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+            allCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+            updateResultText('');
+        });
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const questionNumber = this.name.charAt(1);
+                const allCheckboxes = document.querySelectorAll(`input[name="q${questionNumber}"]`);
+                clearStyles(allCheckboxes);
+            });
+        });
+    </script>
+</body>
+</html>

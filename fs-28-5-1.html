@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitium 28.5.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            font-family: 'Fira Mono', monospace;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            font-family: 'Fira Mono', monospace;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+    <p><a href="index.html">< infra</a></p>
+    <h1>Exercitium 28.5.1</h1>
+    <h3><i>inter multa recta elige</i></h3>
+    <form id="quiz">
+        <!-- Вопрос 1 -->
+        <p>1. Quae fuit Alecistis??</p>
+        <input type="checkbox" id="q1a" name="q1" value="rex Thessaliae">
+        <label for="q1a">rex Thessaliae</label><br>
+        <input type="checkbox" id="q1b" name="q1" value="femina quae pro viro suo mori constituit">
+        <label for="q1b">femina quae pro viro suo mori constituit</label><br>
+        <input type="checkbox" id="q1c" name="q1" value="una ex Parcis">
+        <label for="q1c">una ex Parcis</label><br>
+        <input type="checkbox" id="q1d" name="q1" value="bona et proba uxor Admeti">
+        <label for="q1d">bona et proba uxor Admeti</label><br>
+        
+        <!-- Вопрос 2 -->
+        <p>2. Quid Apollo Admeto narravit?</p>
+        <input type="checkbox" id="q2a" name="q2" value="mox mortem ad Admetum venire">
+        <label for="q2a">mox mortem ad Admetum venire</label><br>
+        <input type="checkbox" id="q2b" name="q2" value="se a Parcis postulare ut Admetus semper viveret">
+        <label for="q2b">se a Parcis postulare ut Admetus semper viveret</label><br>
+        <input type="checkbox" id="q2c" name="q2" value="etsi deus, se pro amico dilecto ad Inferos descendere velle">
+        <label for="q2c">etsi deus, se pro amico dilecto ad Inferos descendere velle</label><br>
+        <input type="checkbox" id="q2d" name="q2" value="Admetum aliquem invenire posse, qui pro eo ad moriendum paratus sit">
+        <label for="q2d">Admetum aliquem invenire posse, qui pro eo ad moriendum paratus sit</label><br>
+       
+        <!-- Вопрос 3 -->
+        <p>3. Quid Ademti parentes constituerunt?</p>
+        <input type="checkbox" id="q3a" name="q3" value="uterque paratus erat pro filio dilecto mori">
+        <label for="q3a">uterque paratus erat pro filio dilecto mori</label><br>
+        <input type="checkbox" id="q3b" name="q3" value="pater, victo timore, ad mortuos descendere constituit">
+        <label for="q3b">pater, victo timore, ad mortuos descendere constituit</label><br>
+        <input type="checkbox" id="q3c" name="q3" value="mater pro filio mortem adire voluit">
+        <label for="q3c">mater pro filio mortem adire voluit</label><br>
+        <input type="checkbox" id="q3d" name="q3" value="ita Inferos timebat uterque ut filio adiuvare negaret">
+        <label for="q3d">ita Inferos timebat uterque ut filio adiuvare negaret</label><br>
+
+        <!-- Вопрос 4 -->
+        <p>4. Cur Alceistis auxilium marito tulit?</p>
+        <input type="checkbox" id="q4a" name="q4" value="maritum plus quam vitam suam amabat">
+        <label for="q4a">maritum plus quam vitam suam amabat</label><br>
+        <input type="checkbox" id="q4b" name="q4" value="iam fessa erat vivendo, mortem cupiebat plus quam vitam">
+        <label for="q4b">iam fessa erat vivendo, mortem cupiebat plus quam vitam</label><br>
+        <input type="checkbox" id="q4c" name="q4" value="Ademetus eam ad Inferos descendere coegit">
+        <label for="q4c">Ademetus eam ad Inferos descendere coegit</label><br>
+        <input type="checkbox" id="q4d" name="q4" value="exaudivit enim matrem patremque nolle pro Admeto mori">
+        <label for="q4d">exaudivit enim matrem patremque nolle pro Admeto mori</label><br>
+
+        <!-- Вопрос 5 -->
+        <p>5. Quomodo Hercules de morte Alcestis cognovit?</p>
+        <input type="checkbox" id="q5a" name="q5" value="id dixit Admetus; qui Herculem in regia sua excepit ob eam ipsam causam ut de uxore amisso ei narraret">
+        <label for="q5a">id dixit Admetus; qui Herculem in regia sua excepit ob eam ipsam causam ut de uxore amisso ei narraret</label><br>
+        <input type="checkbox" id="q5b" name="q5" value="regem maerere animadvertit eumque interrogat quae sit causa doloris">
+        <label for="q5b">regem maerere animadvertit eumque interrogat quae sit causa doloris</label><br>
+        <input type="checkbox" id="q5c" name="q5" value="servi Admeti de dominae suae morte Herculi narraverenut">
+        <label for="q5c">servi Amdeti de dominae suae morte Herculi narraverenut</label><br>
+        <input type="checkbox" id="q5d" name="q5" value="Alcestim mortuam in quodam regiae cubiculo forte animadvertit">
+        <label for="q5d">Alcestim mortuam in quodam regiae cubiculo forte animadvertit</label><br>
+
+<!-- Вопрос 6 -->
+        <p>6. Quomodo Alcestis ad vivos reducta est?</p>
+        <input type="checkbox" id="q6a" name="q6" value="Admetus ad Inferos venit eamque reduxit">
+        <label for="q6a">Admetus ad Inferos venit eamque reduxit</label><br>
+        <input type="checkbox" id="q6b" name="q6" value="Pluto, rex Inferorum, Alcestim ad maritum orantem misit">
+        <label for="q6b">Pluto, rex Inferorum, Alcestim ad maritum orantem misit</label><br>
+        <input type="checkbox" id="q6c" name="q6" value="Hercules Alcestim coniugi reddidit">
+        <label for="q6c">Hercules Alcestim coniugi reddidit</label><br>
+        <input type="checkbox" id="q6d" name="q6" value="nihil difficile est amanti, ut aiunt">
+        <label for="q6d">nihil difficile est amanti, ut aiunt</label><br>
+    </form>
+    <p id="result"></p>
+
+    <br>
+    <button id="checkAnswers">recte an prave? </button>
+    <button id="showAnswers">solve omnia</button>
+    <button id="deleteAnswers">dele omnia</button>
+
+    <script>
+        const correctAnswers = {
+            q1: ["femina quae pro viro suo mori constituit", "bona et proba uxor Admeti"],
+            q2: ["mox mortem ad Admetum venire", "Admetum aliquem invenire posse, qui pro eo ad moriendum paratus sit"],
+            q3: ["ita Inferos timebat uterque ut filio adiuvare negaret"],
+            q4: ["maritum plus quam vitam suam amabat", "exaudivit enim matrem patremque nolle pro Admeto mori"],
+            q5: ["servi Admeti de dominae suae morte Herculi narraverenut"],
+            q6: ["Hercules Alcestim coniugi reddidit"]
+        };
+        function updateResultText(text) {
+            document.getElementById("result").innerHTML = text;
+        }
+
+        function clearStyles(checkboxes) {
+            checkboxes.forEach(checkbox => {
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+        }
+
+        document.getElementById("checkAnswers").addEventListener("click", function() {
+            let resultText = "";
+            let correctCount = 0;
+
+            for (let i = 1; i <= 6; i++) {
+                const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+                const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
+                const correct = correctAnswers[`q${i}`];
+
+                if (selectedValues.length === 0) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                } else if (selectedValues.every(val => correct.includes(val)) && selectedValues.length === correct.length) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Recte!</b><br>`;
+                    correctCount++;
+                } else {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                }
+            }
+
+            resultText += `<br>Ergo ${correctCount} ex 6 recta sunt.`;
+            updateResultText(resultText);
+        });
+
+        document.getElementById("showAnswers").addEventListener("click", function() {
+            for (let i = 1; i <= 6; i++) {
+                const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
+                const correct = correctAnswers[`q${i}`];
+
+                clearStyles(checkboxes);
+
+                checkboxes.forEach(checkbox => {
+                    if (correct.includes(checkbox.value)) {
+                        checkbox.nextElementSibling.classList.add("correct");
+                    } else if (!checkbox.checked) {
+                        checkbox.nextElementSibling.classList.add("incorrect");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("deleteAnswers").addEventListener("click", function() {
+            const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+            allCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+            updateResultText('');
+        });
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const questionNumber = this.name.charAt(1);
+                const allCheckboxes = document.querySelectorAll(`input[name="q${questionNumber}"]`);
+                clearStyles(allCheckboxes);
+            });
+        });
+    </script>
+</body>
+</html>

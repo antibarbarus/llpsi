@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitium 27.2.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            font-family: 'Fira Mono', monospace;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            font-family: 'Fira Mono', monospace;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+    <p><a href="index.html">< infra</a></p>
+    <h1>Exercitium 27.2.1</h1>
+    <h3><i>inter multa recta elige</i></h3>
+    <form id="quiz">
+        <!-- Вопрос 1 -->
+        <p>1. Quae fuit Latona?</p>
+        <input type="checkbox" id="q1a" name="q1" value="regina deorum">
+        <label for="q1a">regina deorum</label><br>
+        <input type="checkbox" id="q1b" name="q1" value="filia Neptuni">
+        <label for="q1b">filia Neptuni</label><br>
+        <input type="checkbox" id="q1c" name="q1" value="Apollinis et Dianae mater">
+        <label for="q1c">Apollinis et Dianae mater</label><br>
+        <input type="checkbox" id="q1d" name="q1" value="dea a Iunone non amata">
+        <label for="q1d">dea a Iunone non amata
+</label><br>
+
+        <!-- Вопрос 2 -->
+        <p>2. Quomodo Neptunus et Iuppiter Latonae profuerunt?</p>
+        <input type="checkbox" id="q2a" name="q2" value="Neptunus parvam insulam ex Oceani fundo extulit">
+        <label for="q2a">Neptunus parvam insulam ex Oceani fundo extulit</label><br>
+        <input type="checkbox" id="q2b" name="q2" value="Iuppiter eam in formam delphini convertit; curat enim ne Iuno eam inveniat">
+        <label for="q2b">Iuppiter eam in formam delphini convertit; curat enim ne Iuno eam inveniat</label><br>
+        <input type="checkbox" id="q2c" name="q2" value="Iuppiter insulam quae fluctibus iactabatur catenis vinxit">
+        <label for="q2c">Iuppiter insulam quae fluctibus iactabatur catenis vinxit</label><br>
+        <input type="checkbox" id="q2d" name="q2" value="Neptunus ei filium filiamque dedit">
+        <label for="q2d">Neptunus ei filium filiamque dedit</label><br>
+
+        <!-- Вопрос 3 -->
+        <p>3. Cur Latona insulam reliquit?</p>
+        <input type="checkbox" id="q3a" name="q3" value="nolebat in insula habitare quae sicut navis non fixa stabat">
+        <label for="q3a">nolebat in insula habitare quae sicut navis non fixa stabat</label><br>
+        <input type="checkbox" id="q3b" name="q3" value="sitiebat et esuriebat, neque aquam in insula invenire poterat">
+        <label for="q3b">sitiebat et esuriebat, neque aquam in insula invenire poterat</label><br>
+        <input type="checkbox" id="q3c" name="q3" value="Iuno eam persecuta est">
+        <label for="q3c">Iuno eam persecuta est</label><br>
+        <input type="checkbox" id="q3d" name="q3" value="Dianam et Apollinem quos minime amabat ibi deserere constituit">
+        <label for="q3d">Dianam et Apollinem quos minime amabat ibi deserere constituit</label><br>
+
+        <!-- Вопрос 4 -->
+        <p>4. Quibus precibus Latona agricolas orat ne aquam bibere prohibeant?</p>
+        <input type="checkbox" id="q4a" name="q4" value="liberos iis ostendit qui bracchia ad agricolas tendunt auxilium petentes">
+        <label for="q4a">liberos iis ostendit qui bracchia ad agricolas tendunt auxilium petentes</label><br>
+        <input type="checkbox" id="q4b" name="q4" value="dicit ‘omnibus licere aqua uti quae est donum naturae commune’">
+        <label for="q4b">dicit ‘omnibus licere aqua uti quae est donum naturae commune’</label><br>
+        <input type="checkbox" id="q4c" name="q4" value="dicit ‘se aquam bibere velle neque eam lavando turbare’">
+        <label for="q4c">dicit ‘se aquam bibere velle neque eam lavando turbare’</label><br>
+        <input type="checkbox" id="q4d" name="q4" value="promittit iis curare ut frumentum bene crescat si aquam bibere sinunt">
+        <label for="q4d">promittit iis curare ut frumentum bene crescat si aquam bibere sinunt</label><br>
+
+        <!-- Вопрос 5 -->
+        <p>5. Quomodo agricolae puniti sunt??</p>
+        <input type="checkbox" id="q5a" name="q5" value="Latona dea imbrem ranarum agricolis misit">
+        <label for="q5a">Latona dea imbrem ranarum agricolis misit</label><br>
+        <input type="checkbox" id="q5b" name="q5" value="liberi Latonae in ranas conversi sunt; quo viso, agricolae prae metu moriuntur">
+        <label for="q5b">liberi Latonae in ranas conversi sunt; quo viso, agricolae prae metu moriuntur</label><br>
+        <input type="checkbox" id="q5c" name="q5" value="Iuppiter agricolas in ranas mutavit">
+        <label for="q5c">Iuppiter agricolas in ranas mutavit</label><br>
+        <input type="checkbox" id="q5d" name="q5" value="dei ranis lacum implent; ita faciunt ne umquam agricolae aquis ad bibendum utantur">
+        <label for="q5d">dei ranis lacum implent; ita faciunt ne umquam agricolae aquis ad bibendum utantur</label><br>
+    </form>
+    <p id="result"></p>
+
+    <br>
+    <button id="checkAnswers">recte an prave? </button>
+    <button id="showAnswers">solve omnia</button>
+    <button id="deleteAnswers">dele omnia</button>
+
+    <script>
+        const correctAnswers = {
+            q1: ["Apollinis et Dianae mater", "dea a Iunone non amata"],
+            q2: ["Neptunus parvam insulam ex Oceani fundo extulit", "Iuppiter insulam quae fluctibus iactabatur catenis vinxit"],
+            q3: ["Iuno eam persecuta est"],
+            q4: ["liberos iis ostendit qui bracchia ad agricolas tendunt auxilium petentes", "dicit ‘omnibus licere aqua uti quae est donum naturae commune’", "dicit ‘se aquam bibere velle neque eam lavando turbare’"],
+            q5: ["Iuppiter agricolas in ranas mutavit"]
+        };
+
+        function updateResultText(text) {
+            document.getElementById("result").innerHTML = text;
+        }
+
+        function clearStyles(checkboxes) {
+            checkboxes.forEach(checkbox => {
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+        }
+
+        document.getElementById("checkAnswers").addEventListener("click", function() {
+            let resultText = "";
+            let correctCount = 0;
+
+            for (let i = 1; i <= 5; i++) {
+                const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+                const selectedValues = Array.from(selected).map(checkbox => checkbox.value);
+                const correct = correctAnswers[`q${i}`];
+
+                if (selectedValues.length === 0) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                } else if (selectedValues.every(val => correct.includes(val)) && selectedValues.length === correct.length) {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Recte!</b><br>`;
+                    correctCount++;
+                } else {
+                    resultText += `Syra responsum tuum ad <b>${i}</b> interrogatum inspiciens: <b>Prave!</b><br>`;
+                }
+            }
+
+            resultText += `<br>Ergo ${correctCount} ex 5 recta sunt.`;
+            updateResultText(resultText);
+        });
+
+        document.getElementById("showAnswers").addEventListener("click", function() {
+            for (let i = 1; i <= 5; i++) {
+                const checkboxes = document.querySelectorAll(`input[name="q${i}"]`);
+                const correct = correctAnswers[`q${i}`];
+
+                clearStyles(checkboxes);
+
+                checkboxes.forEach(checkbox => {
+                    if (correct.includes(checkbox.value)) {
+                        checkbox.nextElementSibling.classList.add("correct");
+                    } else if (!checkbox.checked) {
+                        checkbox.nextElementSibling.classList.add("incorrect");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("deleteAnswers").addEventListener("click", function() {
+            const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+            allCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.nextElementSibling.classList.remove("correct", "incorrect");
+                checkbox.nextElementSibling.style.fontWeight = 'normal';
+            });
+            updateResultText('');
+        });
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const questionNumber = this.name.charAt(1);
+                const allCheckboxes = document.querySelectorAll(`input[name="q${questionNumber}"]`);
+                clearStyles(allCheckboxes);
+            });
+        });
+    </script>
+</body>
+</html>
