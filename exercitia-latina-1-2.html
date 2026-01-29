@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercitium 1.1</title>
+    <title>Exercitium 1.2</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
     <style>
         ul {
@@ -53,27 +53,26 @@
 <body>
     <p><a href="exercitia-latina-1.html">< назад</a></p>
     <h1>Exercitium 1</h1>
-    <h2>Заполните пропуски формами глагола «быть» (est, sunt)</h2>
+    <h2>Заполните пропуски подходящими словами</h2>
     
     <div class="instructions">
+        Вставьте слова: in, quoque, et, ne, nōn, Ubi, sed, fluvius
     </div>
     
     <div class="exercise-text">
-        <p>1. Italia in Eurōpā <input type="text" id="gap1"></p>
-        <p>2. Gallia in Eurōpā <input type="text" id="gap2"></p>
-        <p>3. Italia et Gallia in Eurōpā <input type="text" id="gap3"></p>
-        <p>4. Arabia in Eurōpā nōn <input type="text" id="gap4"></p>
-        <p>5. Arabia in Asiā <input type="text" id="gap5"></p>
-        <p>6. Syria quoque in Asiā <input type="text" id="gap6"></p>
-        <p>7. Syria et Arabia in Asiā <input type="text" id="gap7"></p>
-        <p>8. Hispānia in Asiā nōn <input type="text" id="gap8"></p>
-        <p>9. Hispānia et Gallia et Italia in Eurōpā <input type="text" id="gap9"></p>
+        <p>1. Italia <input type="text" id="gap1"> Eurōpā est; Graecia <input type="text" id="gap2"> in Eurōpā est.</p>
+        <p>2. Italia <input type="text" id="gap3"> Graecia in Eurōpā sunt.</p>
+        <p>3. Est <input type="text" id="gap4"> Arabia in Eurōpā? Arabia in Eurōpā <input type="text" id="gap5"> est.</p>
+        <p>4. <input type="text" id="gap6"> est Arabia? In Asiā est Arabia.</p>
+        <p>5. Arabia nōn est in Eurōpā, <input type="text" id="gap7"> in Asiā.</p>
+        <p>6. Germānia <input type="text" id="gap8"> in Asiā, <input type="text" id="gap9"> in Eurōpā est.</p>
+        <p>7. Rhēnus est in Germānia. Rhēnus <input type="text" id="gap10"> est.</p>
     </div>
 
     <p class="result" id="result"></p>
 
     <script>
-        const answers = ["est", "est", "sunt", "est", "est", "est", "sunt", "est", "sunt"];
+        const answers = ["in", "quoque", "et", "ne", "nōn", "Ubi", "sed", "nōn", "sed", "fluvius"];
         
         // Функция для удаления диакритики
         const removeDiacritics = (str) => {
