@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="la">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -144,13 +144,13 @@
             
             const resultElement = document.getElementById('result');
             if (correct === answers.length) {
-                resultElement.textContent = 'Все ответы правильные! Отличная работа!';
+                resultElement.textContent = 'Omnia recta sunt! Optime! (Все ответы правильные! Отличная работа!)';
                 resultElement.style.backgroundColor = 'lightgreen';
             } else if (almostCorrect > 0) {
-                resultElement.textContent = `${correct} из ${answers.length} ответов правильны, ${almostCorrect} почти правильны (ошибка в диакритике или регистре).`;
+                resultElement.textContent = `${correct} ex ${answers.length} recta sunt, ${almostCorrect} prope recta sunt. (${correct} из ${answers.length} ответов правильны, ${almostCorrect} почти правильны; ошибка в долготе или регистре.)`;
                 resultElement.style.backgroundColor = '';
             } else {
-                resultElement.textContent = `${correct} из ${answers.length} ответов правильны.`;
+                resultElement.textContent = `${correct} ex ${answers.length} recta sunt. (${correct} из ${answers.length} ответов правильны.)`;
                 resultElement.style.backgroundColor = '';
             }
         };

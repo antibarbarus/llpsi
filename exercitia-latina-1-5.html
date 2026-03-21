@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercitium 1.8</title>
+    <title>Exercitium 1.5</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
     <style>
         ul {
@@ -24,7 +24,7 @@
             font-family: 'Fira Mono', monospace;
             padding: 5px;
             font-size: 16px;
-            width: 80px;
+            width: 120px;
             transition: background-color 0.3s;
             border: 1px solid #ccc;
             border-radius: 3px;
@@ -52,35 +52,39 @@
 </head>
 <body>
     <p><a href="exercitia-latina-1.html">< назад</a></p>
-    <h1>Exercitium 8</h1>
-    <h2>Заполните пропуски подходящими словами</h2>
+    <h1>Exercitium 5</h1>
     
     <div class="instructions">
-        Вставьте слова: duo, Latīnus, littera, mīlle, numerus, prīmus secundus, sex, syllaba, tertius, trēs, ūnus, vocābulum
     </div>
     
     <div class="exercise-text">
-        <p>1. III <input type="text" id="gap1"> Rōmānus est. I et II <input type="text" id="gap2"> sunt.</p>
-        <p>2. Nōn <input type="text" id="gap3"> Latīnum est. Nōn et sed <input type="text" id="gap4"> Latīna sunt.</p>
-        <p>3. Γ <input type="text" id="gap5"> Graeca est. Γ et Δ <input type="text" id="gap6"> <input type="text" id="gap7"> sunt.</p>
-        <p>4. A et B litterae <input type="text" id="gap8"> sunt, C quoque <input type="text" id="gap9"> <input type="text" id="gap10"> est.</p>
-        <p>5. In et num <input type="text" id="gap11"> Latīna sunt. Et quoque <input type="text" id="gap12"> <input type="text" id="gap13"> est.</p>
-        <p>6. <input type="text" id="gap14"> [I] et <input type="text" id="gap15"> [II] numerī sunt. <input type="text" id="gap16"> [III] quoque <input type="text" id="gap17"> est.</p>
-        <p>7. In vocābulō Latīna sunt <input type="text" id="gap18"> [VI] litterae et <input type="text" id="gap19"> [III] <input type="text" id="gap20"> : syllaba <input type="text" id="gap21"> La-, <input type="text" id="gap22"> -tī-, <input type="text" id="gap23"> -na.</p>
-        <p>8. In capitulō prīmō sunt <input type="text" id="gap24"> [Μ] vocābula.</p>
+        <p>1. Sicilia īnsula est. Sicilia et Sardinia <input type="text" id="gap1" > sunt.</p>
+        <p>2. Rhēnus fluvius est. Rhēnus et Dānuvius <input type="text" id="gap2" >.</p>
+        <p>3. Tūsculum oppidum est. Tūsculum et Brundisium <input type="text" id="gap3">.</p>
+        <p>4. Corsica et Sardinia īnsulae sunt. Sicilia quoque <input type="text" id="gap4"> est.</p>
+        <p>5. Nīlus et Tiberis fluviī sunt. Dānuvius quoque <input type="text" id="gap5">.</p>
+        <p>6. Sparta et Delphī oppida sunt. Brundisium quoque <input type="text" id="gap6">.</p>
     </div>
 
     <p class="result" id="result"></p>
 
     <script>
-        const answers = ["numerus", "numerī", "vocābulum", "vocābula", "littera", "litterae", "Graecae", "Latīnae", "littera", "Latīna", "vocābula", "vocābulum", "Latīnum", "ūnus", "duo", "Trēs", "numerus", "sex", "trēs", "syllabae", "prīma", "secunda", "tertia", "mīlle"];
+        // === ОЖИДАЕМЫЕ ОТВЕТЫ (с учётом структуры пропусков) ===
+        const answers = [
+            "īnsulae",         // 1. Sicilia et Sardinia īnsulae sunt.
+            "fluviī sunt",     // 2. Rhēnus et Dānuvius fluviī sunt.
+            "oppida sunt",     // 3. Tūsculum et Brundisium oppida sunt.
+            "īnsula",          // 4. Sicilia quoque īnsula est.
+            "fluvius est",     // 5. Dānuvius quoque fluvius est.
+            "oppidum est"      // 6. Brundisium quoque oppidum est.
+        ];
         
-        // Функция для удаления диакритики
+        // Функция для удаления диакритики (макроны, акуты и т.п.)
         const removeDiacritics = (str) => {
             return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         };
         
-        // Функция для установки стилей
+        // Установка стиля для конкретного поля
         const setStyles = (element, status) => {
             element.classList.remove('correct', 'almost-correct', 'incorrect');
             if (status === 'correct') {
@@ -92,7 +96,7 @@
             }
         };
 
-        // Функция для проверки одного ответа
+        // Проверка одного ответа (сравнение с учётом диакритики и регистра)
         const checkSingleAnswer = (index) => {
             const inputElement = document.getElementById(`gap${index + 1}`);
             const userAnswer = inputElement.value.trim();
@@ -100,27 +104,28 @@
             
             if (userAnswer === '') {
                 setStyles(inputElement, '');
-            } else {
-                // Приводим к нижнему регистру для сравнения
-                const normalizedUserAnswer = userAnswer.toLowerCase();
-                const normalizedCorrectAnswer = correctAnswer.toLowerCase();
-                
-                // Точное совпадение (с учетом регистра)
-                if (userAnswer === correctAnswer) {
-                    setStyles(inputElement, 'correct');
-                } 
-                // Совпадение без учета диакритики и регистра
-                else if (removeDiacritics(normalizedUserAnswer) === removeDiacritics(normalizedCorrectAnswer)) {
-                    setStyles(inputElement, 'almost-correct');
-                } 
-                // Неправильный ответ
-                else {
-                    setStyles(inputElement, 'incorrect');
-                }
+                return;
+            }
+            
+            // Нормализация: удаляем лишние пробелы, приводим к нижнему регистру для сравнения
+            const normalizedUser = userAnswer.toLowerCase().replace(/\s+/g, ' ').trim();
+            const normalizedCorrect = correctAnswer.toLowerCase().replace(/\s+/g, ' ').trim();
+            
+            // 1) Точное совпадение (с учётом регистра и диакритики)
+            if (userAnswer === correctAnswer) {
+                setStyles(inputElement, 'correct');
+            } 
+            // 2) Совпадение без учёта диакритики и регистра (почти правильно)
+            else if (removeDiacritics(normalizedUser) === removeDiacritics(normalizedCorrect)) {
+                setStyles(inputElement, 'almost-correct');
+            } 
+            // 3) Неправильно
+            else {
+                setStyles(inputElement, 'incorrect');
             }
         };
 
-        // Функция для обновления общего результата
+        // Обновление общего результата (счётчик правильных / почти правильных)
         const updateResults = () => {
             let correct = 0;
             let almostCorrect = 0;
@@ -129,14 +134,14 @@
                 const inputElement = document.getElementById(`gap${i + 1}`);
                 const userAnswer = inputElement.value.trim();
                 
+                if (userAnswer === '') return;
+                
                 if (userAnswer === answer) {
                     correct++;
-                } else if (userAnswer !== '') {
-                    // Приводим к нижнему регистру для сравнения
-                    const normalizedUserAnswer = userAnswer.toLowerCase();
-                    const normalizedCorrectAnswer = answer.toLowerCase();
-                    
-                    if (removeDiacritics(normalizedUserAnswer) === removeDiacritics(normalizedCorrectAnswer)) {
+                } else {
+                    const normUser = userAnswer.toLowerCase().replace(/\s+/g, ' ').trim();
+                    const normCorrect = answer.toLowerCase().replace(/\s+/g, ' ').trim();
+                    if (removeDiacritics(normUser) === removeDiacritics(normCorrect)) {
                         almostCorrect++;
                     }
                 }
@@ -155,27 +160,19 @@
             }
         };
 
-        // Добавление обработчиков событий
+        // Инициализация: добавляем обработчики на все поля, восстанавливаем стили при загрузке
         window.onload = () => {
             answers.forEach((_, i) => {
                 const inputElement = document.getElementById(`gap${i + 1}`);
-                
-                // Проверка при загрузке (если есть введенные данные)
                 if (inputElement.value.trim() !== '') {
                     checkSingleAnswer(i);
                 }
                 
-                // Обработчик ввода для немедленной проверки
                 inputElement.addEventListener('input', () => {
-                    // Немедленная проверка
                     checkSingleAnswer(i);
-                    
-                    // Обновление общего результата
                     updateResults();
                 });
             });
-
-            // Обновление общего результата при загрузке
             updateResults();
         };
     </script>

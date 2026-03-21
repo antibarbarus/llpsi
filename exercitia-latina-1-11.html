@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercitium 1.8</title>
+    <title>Exercitium 1.11</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
     <style>
         ul {
@@ -24,7 +24,7 @@
             font-family: 'Fira Mono', monospace;
             padding: 5px;
             font-size: 16px;
-            width: 80px;
+            width: 150px;
             transition: background-color 0.3s;
             border: 1px solid #ccc;
             border-radius: 3px;
@@ -51,36 +51,56 @@
     </style>
 </head>
 <body>
-    <p><a href="exercitia-latina-1.html">< назад</a></p>
-    <h1>Exercitium 8</h1>
-    <h2>Заполните пропуски подходящими словами</h2>
-    
-    <div class="instructions">
-        Вставьте слова: duo, Latīnus, littera, mīlle, numerus, prīmus secundus, sex, syllaba, tertius, trēs, ūnus, vocābulum
-    </div>
+    <h1>Exercitium 11</h1>
+    <h2>Заполните пропуски</h2>
     
     <div class="exercise-text">
-        <p>1. III <input type="text" id="gap1"> Rōmānus est. I et II <input type="text" id="gap2"> sunt.</p>
-        <p>2. Nōn <input type="text" id="gap3"> Latīnum est. Nōn et sed <input type="text" id="gap4"> Latīna sunt.</p>
-        <p>3. Γ <input type="text" id="gap5"> Graeca est. Γ et Δ <input type="text" id="gap6"> <input type="text" id="gap7"> sunt.</p>
-        <p>4. A et B litterae <input type="text" id="gap8"> sunt, C quoque <input type="text" id="gap9"> <input type="text" id="gap10"> est.</p>
-        <p>5. In et num <input type="text" id="gap11"> Latīna sunt. Et quoque <input type="text" id="gap12"> <input type="text" id="gap13"> est.</p>
-        <p>6. <input type="text" id="gap14"> [I] et <input type="text" id="gap15"> [II] numerī sunt. <input type="text" id="gap16"> [III] quoque <input type="text" id="gap17"> est.</p>
-        <p>7. In vocābulō Latīna sunt <input type="text" id="gap18"> [VI] litterae et <input type="text" id="gap19"> [III] <input type="text" id="gap20"> : syllaba <input type="text" id="gap21"> La-, <input type="text" id="gap22"> -tī-, <input type="text" id="gap23"> -na.</p>
-        <p>8. In capitulō prīmō sunt <input type="text" id="gap24"> [Μ] vocābula.</p>
+        <p>1. Fluvius singulāris est. Fluviī <input type="text" id="gap1"> est.</p>
+        <p>2. Īnsulae plūrālis est. Īnsula <input type="text" id="gap2"> est.</p>
+        <p>3. Oppidum <input type="text" id="gap3"> est. Oppida <input type="text" id="gap4"> est.</p>
+        <p>4. Singulāris: fluvius; plūrālis: <input type="text" id="gap5">.</p>
+        <p>5. Plūrālis: īnsulae; singulāris: <input type="text" id="gap6">.</p>
+        <p>6. Singulāris: oppidum; plūrālis: <input type="text" id="gap7">.</p>
+        <p>7. Plūrālis: numerī; singulāris: <input type="text" id="gap8">.</p>
+        <p>8. Singulāris: littera; plūrālis: <input type="text" id="gap9">.</p>
+        <p>9. Plūrālis: vocābula; singulāris: <input type="text" id="gap10">.</p>
+        <p>10. Singulāris: īnsula magna; plūrālis: <input type="text" id="gap11">.</p>
+        <p>11. Plūrālis: oppida magna; singulāris: <input type="text" id="gap12">.</p>
+        <p>12. Singulāris: numerus Rōmānus; plūrālis: <input type="text" id="gap13">.</p>
+        <p>13. Plūrālis: litterae Graecae; singulāris: <input type="text" id="gap14">.</p>
+        <p>14. Singulāris: vocābulum Latīnum; plūrālis: <input type="text" id="gap15">.</p>
+        <p>15. Plūrālis: exempla; singulāris: <input type="text" id="gap16">.</p>
     </div>
 
     <p class="result" id="result"></p>
 
     <script>
-        const answers = ["numerus", "numerī", "vocābulum", "vocābula", "littera", "litterae", "Graecae", "Latīnae", "littera", "Latīna", "vocābula", "vocābulum", "Latīnum", "ūnus", "duo", "Trēs", "numerus", "sex", "trēs", "syllabae", "prīma", "secunda", "tertia", "mīlle"];
+        // Правильные ответы в порядке полей
+        const answers = [
+            "plūrālis",     // 1
+            "singulāris",    // 2
+            "singulāris",    // 3 (первый пропуск)
+            "plūrālis",      // 4 (второй пропуск)
+            "fluviī",        // 5
+            "īnsula",        // 6
+            "oppida",        // 7
+            "numerus",       // 8
+            "litterae",      // 9
+            "vocābulum",     // 10
+            "īnsulae magnae",   // 11
+            "oppidum magnum",   // 12
+            "numerī Rōmānī",    // 13
+            "littera Graeca",   // 14
+            "vocābula Latīna",  // 15
+            "exemplum"          // 16
+        ];
         
-        // Функция для удаления диакритики
+        // Функция для удаления диакритики (макронов)
         const removeDiacritics = (str) => {
             return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         };
         
-        // Функция для установки стилей
+        // Функция для установки стилей поля ввода
         const setStyles = (element, status) => {
             element.classList.remove('correct', 'almost-correct', 'incorrect');
             if (status === 'correct') {
@@ -100,23 +120,19 @@
             
             if (userAnswer === '') {
                 setStyles(inputElement, '');
-            } else {
-                // Приводим к нижнему регистру для сравнения
-                const normalizedUserAnswer = userAnswer.toLowerCase();
-                const normalizedCorrectAnswer = correctAnswer.toLowerCase();
-                
-                // Точное совпадение (с учетом регистра)
-                if (userAnswer === correctAnswer) {
-                    setStyles(inputElement, 'correct');
-                } 
-                // Совпадение без учета диакритики и регистра
-                else if (removeDiacritics(normalizedUserAnswer) === removeDiacritics(normalizedCorrectAnswer)) {
-                    setStyles(inputElement, 'almost-correct');
-                } 
-                // Неправильный ответ
-                else {
-                    setStyles(inputElement, 'incorrect');
-                }
+                return;
+            }
+            
+            // Точное совпадение (с учётом регистра и долгот)
+            if (userAnswer === correctAnswer) {
+                setStyles(inputElement, 'correct');
+            } 
+            // Совпадение без учёта диакритики и регистра
+            else if (removeDiacritics(userAnswer.toLowerCase()) === removeDiacritics(correctAnswer.toLowerCase())) {
+                setStyles(inputElement, 'almost-correct');
+            } 
+            else {
+                setStyles(inputElement, 'incorrect');
             }
         };
 
@@ -132,11 +148,7 @@
                 if (userAnswer === answer) {
                     correct++;
                 } else if (userAnswer !== '') {
-                    // Приводим к нижнему регистру для сравнения
-                    const normalizedUserAnswer = userAnswer.toLowerCase();
-                    const normalizedCorrectAnswer = answer.toLowerCase();
-                    
-                    if (removeDiacritics(normalizedUserAnswer) === removeDiacritics(normalizedCorrectAnswer)) {
+                    if (removeDiacritics(userAnswer.toLowerCase()) === removeDiacritics(answer.toLowerCase())) {
                         almostCorrect++;
                     }
                 }
@@ -148,34 +160,30 @@
                 resultElement.style.backgroundColor = 'lightgreen';
             } else if (almostCorrect > 0) {
                 resultElement.textContent = `${correct} ex ${answers.length} recta sunt, ${almostCorrect} prope recta sunt. (${correct} из ${answers.length} ответов правильны, ${almostCorrect} почти правильны; ошибка в долготе или регистре.)`;
-                resultElement.style.backgroundColor = '';
+                resultElement.style.backgroundColor = 'gold';
             } else {
                 resultElement.textContent = `${correct} ex ${answers.length} recta sunt. (${correct} из ${answers.length} ответов правильны.)`;
                 resultElement.style.backgroundColor = '';
             }
         };
 
-        // Добавление обработчиков событий
+        // Инициализация обработчиков
         window.onload = () => {
             answers.forEach((_, i) => {
                 const inputElement = document.getElementById(`gap${i + 1}`);
                 
-                // Проверка при загрузке (если есть введенные данные)
+                // Проверка при загрузке (если есть введённые данные)
                 if (inputElement.value.trim() !== '') {
                     checkSingleAnswer(i);
                 }
                 
                 // Обработчик ввода для немедленной проверки
                 inputElement.addEventListener('input', () => {
-                    // Немедленная проверка
                     checkSingleAnswer(i);
-                    
-                    // Обновление общего результата
                     updateResults();
                 });
             });
-
-            // Обновление общего результата при загрузке
+            
             updateResults();
         };
     </script>

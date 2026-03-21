@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercitium 1.8</title>
+    <title>Exercitium 1.10</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
     <style>
         ul {
@@ -52,28 +52,28 @@
 </head>
 <body>
     <p><a href="exercitia-latina-1.html">< назад</a></p>
-    <h1>Exercitium 8</h1>
-    <h2>Заполните пропуски подходящими словами</h2>
-    
-    <div class="instructions">
-        Вставьте слова: duo, Latīnus, littera, mīlle, numerus, prīmus secundus, sex, syllaba, tertius, trēs, ūnus, vocābulum
-    </div>
+    <h1>Exercitium 10</h1>
+    <h2>Заполните пропуски правильными окончаниями</h2>
     
     <div class="exercise-text">
-        <p>1. III <input type="text" id="gap1"> Rōmānus est. I et II <input type="text" id="gap2"> sunt.</p>
-        <p>2. Nōn <input type="text" id="gap3"> Latīnum est. Nōn et sed <input type="text" id="gap4"> Latīna sunt.</p>
-        <p>3. Γ <input type="text" id="gap5"> Graeca est. Γ et Δ <input type="text" id="gap6"> <input type="text" id="gap7"> sunt.</p>
-        <p>4. A et B litterae <input type="text" id="gap8"> sunt, C quoque <input type="text" id="gap9"> <input type="text" id="gap10"> est.</p>
-        <p>5. In et num <input type="text" id="gap11"> Latīna sunt. Et quoque <input type="text" id="gap12"> <input type="text" id="gap13"> est.</p>
-        <p>6. <input type="text" id="gap14"> [I] et <input type="text" id="gap15"> [II] numerī sunt. <input type="text" id="gap16"> [III] quoque <input type="text" id="gap17"> est.</p>
-        <p>7. In vocābulō Latīna sunt <input type="text" id="gap18"> [VI] litterae et <input type="text" id="gap19"> [III] <input type="text" id="gap20"> : syllaba <input type="text" id="gap21"> La-, <input type="text" id="gap22"> -tī-, <input type="text" id="gap23"> -na.</p>
-        <p>8. In capitulō prīmō sunt <input type="text" id="gap24"> [Μ] vocābula.</p>
+        <p>1. Itali<input type="text" id="gap1"> in Eurōpā est.</p>
+        <p>2. Rōma in Itali<input type="text" id="gap2"> est.</p>
+        <p>3. Itali<input type="text" id="gap3"> et Graeci<input type="text" id="gap4"> in Eurōp<input type="text" id="gap5"> sunt.</p>
+        <p>4. Rōma nōn in Graeci<input type="text" id="gap6">, sed in Itali<input type="text" id="gap7"> est.</p>
+        <p>5. Imperi<input type="text" id="gap8"> Rōmān<input type="text" id="gap9"> magnum est.</p>
+        <p>6. In imperi<input type="text" id="gap10"> Rōmān<input type="text" id="gap11"> multae prōvinciae sunt.</p>
+        <p>7. Gallia est prōvinci<input type="text" id="gap12"> Rōmāna.</p>
+        <p>8. In prōvinci<input type="text" id="gap13"> Galliā sunt multi fluviī.</p>
+        <p>9. Ubi est vocābul<input type="text" id="gap14"> Latīnum.</p>
+        <p>10. In vocābul<input type="text" id="gap15"> ubi sunt trēs litterae.</p>
+        <p>11. Capitul<input type="text" id="gap16"> prīmum: IMPERIVM ROMANVM.</p>
+        <p>12. In capitul<input type="text" id="gap17"> prīm<input type="text" id="gap18"> multa vocābula sunt.</p>
     </div>
 
     <p class="result" id="result"></p>
 
     <script>
-        const answers = ["numerus", "numerī", "vocābulum", "vocābula", "littera", "litterae", "Graecae", "Latīnae", "littera", "Latīna", "vocābula", "vocābulum", "Latīnum", "ūnus", "duo", "Trēs", "numerus", "sex", "trēs", "syllabae", "prīma", "secunda", "tertia", "mīlle"];
+        const answers = ["a", "ā", "a", "a", "ā", "ā", "ā", "um", "um", "ō", "ō", "a", "ā", "um", "ō", "um", "ō", "ō"];
         
         // Функция для удаления диакритики
         const removeDiacritics = (str) => {

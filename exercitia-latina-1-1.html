@@ -147,7 +147,7 @@
                 resultElement.textContent = 'Omnia recta sunt! Optime! (Все ответы правильные! Отличная работа!)';
                 resultElement.style.backgroundColor = 'lightgreen';
             } else if (almostCorrect > 0) {
-                resultElement.textContent = `${correct} ex ${answers.length} recta sunt, ${almostCorrect} prope recta sunt. (${correct} из ${answers.length} ответов правильны, ${almostCorrect} почти правильны.)`;
+                resultElement.textContent = `${correct} ex ${answers.length} recta sunt, ${almostCorrect} prope recta sunt. (${correct} из ${answers.length} ответов правильны, ${almostCorrect} почти правильны; ошибка в долготе или регистре.)`;
                 resultElement.style.backgroundColor = '';
             } else {
                 resultElement.textContent = `${correct} ex ${answers.length} recta sunt. (${correct} из ${answers.length} ответов правильны.)`;
